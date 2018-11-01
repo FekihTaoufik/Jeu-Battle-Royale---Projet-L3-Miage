@@ -1,1 +1,21 @@
-node_modules
+MODULE - GESTION DE PROJET
+Proposition de nom du jeu : 
+    - Miage Wars - Battle Royale
+    - Star Miage - le jeu de la L3 Miage
+    - Medal of Miage /*ou*/ Call of Miage        
+Brainstorming :
+    - Un multi-joueur 
+    - Type shooter
+    - Les types d'armes a définir (Pistolet, Fusil a pompe, Lance flammes, ...)
+    Les régles du jeu :
+        - Objectif: être le dernier survivant de la partie
+        - Chacun pour soi 
+    Déroulement d'une partie :
+        - Apparition aléatoire dans la map au début du jeu
+        - Armes aléatoirement répartis dans la map                  
+        - Au bout de 2min : apparition d'une tempête et toutes les 3mins, la tempête se rétrecit 
+        - On doit éliminer les autres joueurs et rester hors de portée de la tempête
+    Système d'armes :
+        - 3 lots d'armes (faibles, moyennes, fortes)
+        - armes faibles : corps-à-corps 
+
