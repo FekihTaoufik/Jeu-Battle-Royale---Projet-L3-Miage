@@ -1,38 +1,6 @@
 {
-  "name": "jeu-battle-royale",
-  "version": "1.0.0",
-  "description": "C'est un jeu type battle royale",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon ./server/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/FekihTaoufik:Battle-royale---Projet-L3-miage"
-  },
-  "keywords": [
-    "HTML",
-    "JS",
-    "CSS",
-    "HTML5",
-    "Animation",
-    "Game",
-    "Jeu",
-    "Battle",
-    "Royale",
-    "CANVAS"
-  ],
-  "author": "Taoufik Fekih",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4",
-    "jquery": "^3.3.1",
-    "lodash": "^4.17.11",
-    "moment": "^2.22.2",
-    "path": "^0.12.7",
-    "phaser": "^3.15.1",
-    "socketio": "^1.0.0",
-    "vue": "^2.5.17"
-  }
+    "scripts": {
+        "server": "nodemon ./server/main.js",
+        "dev": "cd ./client && npm run serve"
+      }
 }
