@@ -56,6 +56,15 @@ export default {
     font-family: 'Doctor Glitch';
     src: url('./assets/css/fonts/Doctor Glitch.otf');
 }
+@font-face {
+font-family: "Doctor Glitch";
+src: url("./assets/css/fonts/Doctor Glitch.eot");
+src: url("./assets/css/fonts/Doctor Glitch.eot?#iefix") format("embedded-opentype"),
+     url("./assets/css/fonts/Doctor Glitch.woff") format("woff"),
+     url("./assets/css/fonts/Doctor Glitch.ttf")  format("truetype");
+font-weight: normal;
+font-style: normal
+}
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
 #title_logo{
   margin-bottom:15px;
