@@ -1,4 +1,4 @@
-# Jeu - Battle Royale 
+# Miage Wars 
 
 Il va falloir écrire une petite déscription.
 
