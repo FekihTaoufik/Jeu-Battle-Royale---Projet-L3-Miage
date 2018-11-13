@@ -53,17 +53,13 @@ export default {
 
 <style>
 @font-face {
-    font-family: 'Doctor Glitch';
-    src: url('./assets/css/fonts/Doctor Glitch.otf');
-}
-@font-face {
 font-family: "Doctor Glitch";
-src: url("./assets/css/fonts/Doctor Glitch.eot");
-src: url("./assets/css/fonts/Doctor Glitch.eot?#iefix") format("embedded-opentype"),
-     url("./assets/css/fonts/Doctor Glitch.woff") format("woff"),
-     url("./assets/css/fonts/Doctor Glitch.ttf")  format("truetype");
-font-weight: normal;
-font-style: normal
+src: url("./assets/css/fonts/Doctor Glitch.eot"),
+     url("./assets/css/fonts/Doctor Glitch.woff2"),
+     url("./assets/css/fonts/Doctor Glitch.woff"),
+     url("./assets/css/fonts/Doctor Glitch.ttf"),
+     url("./assets/css/fonts/Doctor Glitch.otf"),
+     url("./assets/css/fonts/Doctor Glitch.svg");
 }
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
 #title_logo{
@@ -71,7 +67,7 @@ font-style: normal
   text-align: center;
   font-size:100px;
   letter-spacing: 7px;
-  font-family: 'Doctor Glitch', Helvetica, Arial, sans-serif;
+  font-family: 'Doctor Glitch';
   color:white;
 }
 .nb_players_in{
