@@ -1,11 +1,7 @@
-# MODULE - GESTION DE PROJET
 
-## Notre équipe :
 
-- Taoufik Fekih (Chef de projet)
-- Sirine Ben Ahmed 
-- Rémi Felin
-
+# MIAGE WARS - *Le jeu de la L3 Miage*
+![Miage wars](https://image.ibb.co/kUWZkL/Logo.png)
 ## Proposition de nom du jeu :
 
 Nous avons réfléchie à 3 noms possibles pour notre jeu :
@@ -15,9 +11,6 @@ Nous avons réfléchie à 3 noms possibles pour notre jeu :
 - Medal of Miage  *ou*  Call of Miage
 
 Nous avons choisi (à l’unanimité) ...
-
-# MIAGE WARS - *Le jeu de la L3 Miage*
-
 ## Brainstorming :
 
 ### Les bases de notre projet :
@@ -57,3 +50,14 @@ Prochainement
 ## Installation et usage
 Prochainement
 
+## Equipe de travail :
+Professeur encadrant : [M. Michel BUFFA](https://github.com/micbuffa)
+- [Taoufik FEKIN](https://github.com/FekihTaoufik)
+- [Rémi FELIN](https://github.com/RemiFELIN)
+- [Sirine BEN AHMED](https://github.com/Sirine-BenAhmed)
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+Copyright (c) 2018-present, FEKIH Taoufik - FELIN Rémi - BEN AHMED Sirine
