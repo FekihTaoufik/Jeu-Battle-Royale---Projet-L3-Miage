@@ -3,30 +3,33 @@
     <iframe  style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/c5LgV5bpV5A?controls=0&autoplay=1&start=3&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="background"></div>
     <div class="main_div">
-      <div id="title_logo">Miage Wars</div>
+      <div id="title_logo">
+        <img src="./assets/img/bg_logo.png" alt="MiageWars">
+        <div class="label"> Miage &nbsp;&nbsp;Wars </div>
+        </div>
       <div class="nb_players_in">Nombre de joueurs en ligne : 15 joueurs</div>
       <div class="start_div">
         <input placeholder="Saisir un pseudo" name="pseudo" id="player_pseudo" type="text" v-model="player.pseudo">
         <button id="start_game">Jouer</button>
       </div>
       <div class="classement">
-        <div class="classement_header"></div>
+        <div class="classement_header">Classement <div style="float:right;">TOP 10</div></div>
         <div>
           <table>
             <thead>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>pseudo</td>
+                <td>kills</td>
+                <td>mort</td>
+                <td>parties</td>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+              <tr v-for="(p,i) in records" :key="i">
+                <td>{{p.pseudo}}</td>
+                <td>{{p.kills}}</td>
+                <td>{{p.deaths}}</td>
+                <td>{{p.parties}}</td>
               </tr>
             </tbody>
           </table>
@@ -41,8 +44,16 @@ export default {
   data(){
     return{
       player:{
-        pseudo:'BUFFA'
-      }
+        pseudo:''
+      },
+      records :[
+        {
+          pseudo : 'player',
+          kills:0,
+          deaths:0,
+          games:0
+        }
+        ]
     }
   },
   name: 'app',
@@ -52,6 +63,23 @@ export default {
 </script>
 
 <style>
+.classement .classement_header{
+  background-color:rgb(0, 150, 255);
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  text-align: left;
+  padding:5px 10px;
+  font-family: 'Lato',sans-serif;
+}
+.classement .classement_header,.classement table{
+width:485px;
+display:inline-block;
+}
+.classement{
+  margin-top:15px;
+  text-align: center;
+  color:white;
+}
 @font-face {
 font-family: "Doctor Glitch";
 src: url("./assets/css/fonts/Doctor Glitch.eot"),
@@ -69,6 +97,19 @@ src: url("./assets/css/fonts/Doctor Glitch.eot"),
   letter-spacing: 7px;
   font-family: 'Doctor Glitch';
   color:white;
+  position:relative;
+}
+#title_logo > .label{
+  z-index:2;
+  position:relative;
+}
+#title_logo > img{
+  position: absolute;
+  z-index:1;
+  top:-270px;
+  left:0;
+  right:0;
+  margin:auto;
 }
 .nb_players_in{
   font-weight:300;
