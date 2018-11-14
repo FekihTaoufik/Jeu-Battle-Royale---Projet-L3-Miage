@@ -1,0 +1,335 @@
+{
+	"textures": [
+		{
+			"image": "meleeattack_knife.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 987,
+				"h": 1500
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-meleeattack_knife_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 329,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 658,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 0,
+						"y": 300,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 329,
+						"y": 300,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 658,
+						"y": 300,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 0,
+						"y": 600,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 329,
+						"y": 600,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 658,
+						"y": 600,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 0,
+						"y": 900,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 329,
+						"y": 900,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 658,
+						"y": 900,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 0,
+						"y": 1200,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 329,
+						"y": 1200,
+						"w": 329,
+						"h": 300
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_knife_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 329,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 329,
+						"h": 300
+					},
+					"frame": {
+						"x": 658,
+						"y": 1200,
+						"w": 329,
+						"h": 300
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:4bedffdc974fb5cd5986ae67ab1b5a5f:2fc74d318093d435c03cd2f4622cd8b4:50433a5d729b7803e028c67ee51275ca$"
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"textures": [
+		{
+			"image": "idle_handgun.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 132,
+				"h": 155
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-idle_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 132,
+						"h": 155
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 132,
+						"h": 155
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 132,
+						"h": 155
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:ba29fc7b7a9bb4acbcf923f2dd8886df:e3a736fe154ae30c1e973152415cefb9:e6e39fd4ab944f27f7928e9e63e62677$"
+	}
+}

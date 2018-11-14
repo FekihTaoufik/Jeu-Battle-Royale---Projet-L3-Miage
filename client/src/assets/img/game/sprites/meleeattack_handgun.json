@@ -1,0 +1,335 @@
+{
+	"textures": [
+		{
+			"image": "meleeattack_handgun.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 873,
+				"h": 1280
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-meleeattack_handgun_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 291,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 582,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 0,
+						"y": 256,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 291,
+						"y": 256,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 582,
+						"y": 256,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 0,
+						"y": 512,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 291,
+						"y": 512,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 582,
+						"y": 512,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 0,
+						"y": 768,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 291,
+						"y": 768,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 582,
+						"y": 768,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 0,
+						"y": 1024,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 291,
+						"y": 1024,
+						"w": 291,
+						"h": 256
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_handgun_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 291,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 291,
+						"h": 256
+					},
+					"frame": {
+						"x": 582,
+						"y": 1024,
+						"w": 291,
+						"h": 256
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:39e32a14e62c59a4d04c4c0743f66394:40aee9c0323441ab5b1f13f74f4eed6c:10be088062c462b045d1c97c6d05f3f3$"
+	}
+}

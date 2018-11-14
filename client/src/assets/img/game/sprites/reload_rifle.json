@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "reload_rifle.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 966,
+				"h": 1519
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-reload_rifle_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 217,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 217,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 217,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 434,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 434,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 434,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 651,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 651,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 651,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 868,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 868,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 868,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 1085,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 1085,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 1085,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 1302,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_rifle_19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 1302,
+						"w": 322,
+						"h": 217
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:974fbc1cbd0c13cc451bf5a3759db497:5c4eedb026051fd5c7a7c41bb40b62d6:6b8c8522c701bf29df0e05a7875d4e9c$"
+	}
+}

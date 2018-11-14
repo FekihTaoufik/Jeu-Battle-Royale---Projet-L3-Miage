@@ -1,0 +1,83 @@
+{
+	"textures": [
+		{
+			"image": "shoot_rifle.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 936,
+				"h": 206
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-shoot_rifle_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 312,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 312,
+						"h": 206
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 312,
+						"h": 206
+					}
+				},
+				{
+					"filename": "survivor-shoot_rifle_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 312,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 312,
+						"h": 206
+					},
+					"frame": {
+						"x": 312,
+						"y": 0,
+						"w": 312,
+						"h": 206
+					}
+				},
+				{
+					"filename": "survivor-shoot_rifle_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 312,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 312,
+						"h": 206
+					},
+					"frame": {
+						"x": 624,
+						"y": 0,
+						"w": 312,
+						"h": 206
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:2e20f47d0a9db2491d56777e606e8a6d:9e7a93d1a207785fcbcaa8084673b122:c2fa33953256f2c48b059d490d9dc8f6$"
+	}
+}

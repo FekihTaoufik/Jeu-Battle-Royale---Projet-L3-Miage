@@ -1,0 +1,83 @@
+{
+	"textures": [
+		{
+			"image": "shoot_handgun.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 765,
+				"h": 215
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-shoot_handgun_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 255,
+						"h": 215
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 255,
+						"h": 215
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 255,
+						"h": 215
+					}
+				},
+				{
+					"filename": "survivor-shoot_handgun_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 255,
+						"h": 215
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 255,
+						"h": 215
+					},
+					"frame": {
+						"x": 255,
+						"y": 0,
+						"w": 255,
+						"h": 215
+					}
+				},
+				{
+					"filename": "survivor-shoot_handgun_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 255,
+						"h": 215
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 255,
+						"h": 215
+					},
+					"frame": {
+						"x": 510,
+						"y": 0,
+						"w": 255,
+						"h": 215
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:b4997c4360e5b0781c070746ddc6fd6b:8c359bb7c57f642f11480824be802703:177435e50bb7c04e1c19ac1952fc50cd$"
+	}
+}

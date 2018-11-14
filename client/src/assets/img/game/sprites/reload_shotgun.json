@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "reload_shotgun.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 966,
+				"h": 1519
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-reload_shotgun_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 217,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 217,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 217,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 434,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 434,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 434,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 651,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 651,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 651,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 868,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 868,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 868,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 1085,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 1085,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 644,
+						"y": 1085,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 0,
+						"y": 1302,
+						"w": 322,
+						"h": 217
+					}
+				},
+				{
+					"filename": "survivor-reload_shotgun_19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 217
+					},
+					"frame": {
+						"x": 322,
+						"y": 1302,
+						"w": 322,
+						"h": 217
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:1974bd154b4c6aa949092478628cf86b:7596253138caff222dc8eaf354b01b73:addc75beb08fa4213d4e5443cd445190$"
+	}
+}

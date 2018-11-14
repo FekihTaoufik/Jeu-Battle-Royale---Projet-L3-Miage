@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "strafe_left_feet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 465,
+				"h": 1218
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-strafe_left_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 155,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 310,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 0,
+						"y": 174,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 155,
+						"y": 174,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 310,
+						"y": 174,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 0,
+						"y": 348,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 155,
+						"y": 348,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 310,
+						"y": 348,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 0,
+						"y": 522,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 155,
+						"y": 522,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 310,
+						"y": 522,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 0,
+						"y": 696,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 155,
+						"y": 696,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 310,
+						"y": 696,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 0,
+						"y": 870,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 155,
+						"y": 870,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 310,
+						"y": 870,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 0,
+						"y": 1044,
+						"w": 155,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-strafe_left_19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 155,
+						"h": 174
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 155,
+						"h": 174
+					},
+					"frame": {
+						"x": 155,
+						"y": 1044,
+						"w": 155,
+						"h": 174
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:9c8d18859613c65f0560d904ee93ac8f:3d27d11f2d7b9ac7898fa675c9a2700b:736daa60b197e9cb4181077154f6b797$"
+	}
+}

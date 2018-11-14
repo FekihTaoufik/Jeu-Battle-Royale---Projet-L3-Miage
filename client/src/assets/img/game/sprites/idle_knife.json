@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "idle_knife.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2023,
+				"h": 672
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-idle_knife_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 289,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 578,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 867,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 1156,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 1445,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 1734,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 0,
+						"y": 224,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 289,
+						"y": 224,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 578,
+						"y": 224,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 867,
+						"y": 224,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 1156,
+						"y": 224,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 1445,
+						"y": 224,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 1734,
+						"y": 224,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 0,
+						"y": 448,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 289,
+						"y": 448,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 578,
+						"y": 448,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 867,
+						"y": 448,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 1156,
+						"y": 448,
+						"w": 289,
+						"h": 224
+					}
+				},
+				{
+					"filename": "survivor-idle_knife_19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 289,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 289,
+						"h": 224
+					},
+					"frame": {
+						"x": 1445,
+						"y": 448,
+						"w": 289,
+						"h": 224
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:ea7cf7b5e5c6f4cab848fe15666d0490:63269b32659472a911efa997b6d261b3:ffe4cde5081d21412b85af7ff3cb3971$"
+	}
+}

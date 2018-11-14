@@ -1,0 +1,335 @@
+{
+	"textures": [
+		{
+			"image": "meleeattack_shotgun.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1790,
+				"h": 1059
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-meleeattack_shotgun_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 358,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 716,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 1074,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 1432,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 0,
+						"y": 353,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 358,
+						"y": 353,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 716,
+						"y": 353,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 1074,
+						"y": 353,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 1432,
+						"y": 353,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 0,
+						"y": 706,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 358,
+						"y": 706,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 716,
+						"y": 706,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 1074,
+						"y": 706,
+						"w": 358,
+						"h": 353
+					}
+				},
+				{
+					"filename": "survivor-meleeattack_shotgun_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 358,
+						"h": 353
+					},
+					"frame": {
+						"x": 1432,
+						"y": 706,
+						"w": 358,
+						"h": 353
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:f5a2b7163e109382365d36efd2f03eec:eae6208bac78deedeb012d7648188558:2fb5db17eb770c2e69f31f1258d363a9$"
+	}
+}

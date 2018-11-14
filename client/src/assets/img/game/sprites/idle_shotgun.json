@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "idle_shotgun.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 939,
+				"h": 1449
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-idle_shotgun_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 313,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 626,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 0,
+						"y": 207,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 313,
+						"y": 207,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 626,
+						"y": 207,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 0,
+						"y": 414,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 313,
+						"y": 414,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 626,
+						"y": 414,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 0,
+						"y": 621,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 313,
+						"y": 621,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 626,
+						"y": 621,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 0,
+						"y": 828,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 313,
+						"y": 828,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 626,
+						"y": 828,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 0,
+						"y": 1035,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 313,
+						"y": 1035,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 626,
+						"y": 1035,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 0,
+						"y": 1242,
+						"w": 313,
+						"h": 207
+					}
+				},
+				{
+					"filename": "survivor-idle_shotgun_19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 313,
+						"h": 207
+					},
+					"frame": {
+						"x": 313,
+						"y": 1242,
+						"w": 313,
+						"h": 207
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:28e913109fafcf6f822476307857284c:6136d514bf17ab881352c37c3c214d77:186f3c7f7edc09af93fc4ac9ea58f095$"
+	}
+}

@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "walk_feet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 860,
+				"h": 496
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-walk_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 172,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 344,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 516,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 688,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 0,
+						"y": 124,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 172,
+						"y": 124,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 344,
+						"y": 124,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 516,
+						"y": 124,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 688,
+						"y": 124,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 0,
+						"y": 248,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 172,
+						"y": 248,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 344,
+						"y": 248,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 516,
+						"y": 248,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 688,
+						"y": 248,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 0,
+						"y": 372,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 172,
+						"y": 372,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 344,
+						"y": 372,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 516,
+						"y": 372,
+						"w": 172,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-walk_19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 172,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 172,
+						"h": 124
+					},
+					"frame": {
+						"x": 688,
+						"y": 372,
+						"w": 172,
+						"h": 124
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:853240c2a4ab7431a5f249cf0451fbf6:1fda94b3b8aee1531afe2a4211f9f6d1:577af49cfc932b94c2f21da38593c7c9$"
+	}
+}

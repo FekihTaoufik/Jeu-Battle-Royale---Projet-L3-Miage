@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "run_feet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2040,
+				"h": 248
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-run_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 204,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 408,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 612,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 816,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1020,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1224,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1428,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1632,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1836,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 0,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 204,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 408,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 612,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 816,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1020,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1224,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1428,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1632,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				},
+				{
+					"filename": "survivor-run_19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 204,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 204,
+						"h": 124
+					},
+					"frame": {
+						"x": 1836,
+						"y": 124,
+						"w": 204,
+						"h": 124
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:44d8b16f7318d5fbc6e4932e35caf0bf:654f78ab09fc9d244c7a531db7e59ce6:19db4f18cd742039037ac23981e959f7$"
+	}
+}

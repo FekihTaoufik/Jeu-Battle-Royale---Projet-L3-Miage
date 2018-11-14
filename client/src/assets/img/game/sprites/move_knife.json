@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "move_knife.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1953,
+				"h": 657
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-move_knife_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 279,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 558,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 837,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 1116,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 1395,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 1674,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 0,
+						"y": 219,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 279,
+						"y": 219,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 558,
+						"y": 219,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 837,
+						"y": 219,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 1116,
+						"y": 219,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 1395,
+						"y": 219,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 1674,
+						"y": 219,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 0,
+						"y": 438,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 279,
+						"y": 438,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 558,
+						"y": 438,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 837,
+						"y": 438,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 1116,
+						"y": 438,
+						"w": 279,
+						"h": 219
+					}
+				},
+				{
+					"filename": "survivor-move_knife_19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 219
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 219
+					},
+					"frame": {
+						"x": 1395,
+						"y": 438,
+						"w": 279,
+						"h": 219
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:c348dfa733a45820dc5c6e7733f3fe4c:af6f4fec91aeb41fcbafdbc23491706d:669c9df34046c8b8900a97942bb8ad32$"
+	}
+}

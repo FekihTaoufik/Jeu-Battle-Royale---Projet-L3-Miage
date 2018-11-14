@@ -7,16 +7,14 @@ require("./sockets/index.js")(io);
 app.set('socketio', io);
 
 const path = require('path');
-
-app.use('/assets',express.static(path.resolve('./../client/src/assets')));
-app.use('/vendors',express.static(path.resolve('node_modules')));
+app.use('/assets',express.static(path.resolve('./client/src/assets')));
 
 
 app.get('/',function(req,res){
-    res.sendFile(path.resolve('./../client/dist/index.html'));
+    res.sendFile(path.resolve('./client/dist/index.html'));
 });
 
 
-server.listen(process.env.PORT || 8081,function(){
+server.listen(9000,function(){
     console.log(`Listening on http://localhost:${server.address().port}`);
 });
