@@ -29,7 +29,7 @@ function create ()
     // When loading a CSV map, make sure to specify the tileWidth and tileHeight
     var map = this.make.tilemap({ key: 'map', tileWidth: 16, tileHeight: 16 });
     //var tileset = map.addTilesetImage('tiles');
-    var layer = map.createStaticLayer(0, tileset, 0, 0); // layer index, tileset, x, y
+    //var layer = map.createStaticLayer(0, tileset, 0, 0); //layer index, tileset, x, y
 
     this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
 
@@ -53,18 +53,18 @@ function create ()
 
     help.setScrollFactor(0);
 
-    var gui = new dat.GUI();
+    //var gui = new dat.GUI();
 
     var cam = this.cameras.main;
 
     cam.setBounds(0, 0, 4096, 4096);
 
-    gui.addFolder('Camera');
-    gui.add(cam, 'dirty').listen();
-    gui.add(cam.midPoint, 'x').listen();
-    gui.add(cam.midPoint, 'y').listen();
-    gui.add(cam, 'scrollX').listen();
-    gui.add(cam, 'scrollY').listen();
+    // gui.addFolder('Camera');
+    // gui.add(cam, 'dirty').listen();
+    // gui.add(cam.midPoint, 'x').listen();
+    // gui.add(cam.midPoint, 'y').listen();
+    // gui.add(cam, 'scrollX').listen();
+    // gui.add(cam, 'scrollY').listen();
 }
 
 function update (time, delta)
