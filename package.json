@@ -1,6 +1,7 @@
 {
     "scripts": {
         "server": "nodemon ./server/main.js",
-        "dev": "cd ./client && npm run serve"
+        "dev": "cd ./client && npm run serve",
+        "install_dep" : "cd ./client && npm install && cd ./../server && npm install"
       }
 }
