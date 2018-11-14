@@ -8,7 +8,7 @@ app.set('socketio', io);
 
 const path = require('path');
 
-app.use('/src',express.static(path.resolve('client/src')));
+app.use('/assets',express.static(path.resolve('client/src/assets')));
 app.use('/vendors',express.static(path.resolve('node_modules')));
 
 
