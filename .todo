@@ -2,4 +2,17 @@ MODULE - GESTION DE PROJET
 
 # Listes des taches à faire 
 
-test
+    ☐ Client
+        ✔ page d'accueil @done (2018-11-14 08:42:19)
+        ☐ moteur du jeu 
+            ☐ version 0
+            ☐ version 1
+            ☐ version 2
+    ☐ Serveur
+        ✔ multi-joueur @done (2018-11-14 08:41:27)
+    ☐ design
+    ☐ Readme
+        ✔ version 0 @done (2018-11-14 08:37:17)
+        ☐ version 1
+        ☐ version 2
+
