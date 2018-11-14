@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import jeu from './assets/js/jeu.js'
 export default {
   data(){
     return{
@@ -146,7 +147,7 @@ input#player_pseudo{
   text-align: center;
 }
 .main_div{
-  margin-top:200px;
+  margin-top:250px;
 }
 html,body,#app {
   overflow:hidden;
