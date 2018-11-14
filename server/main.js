@@ -8,12 +8,12 @@ app.set('socketio', io);
 
 const path = require('path');
 
-app.use('/assets',express.static(path.resolve('client/src/assets')));
+app.use('/assets',express.static(path.resolve('./../client/src/assets')));
 app.use('/vendors',express.static(path.resolve('node_modules')));
 
 
 app.get('/',function(req,res){
-    res.sendFile(path.resolve('client/index.html'));
+    res.sendFile(path.resolve('./../client/dist/index.html'));
 });
 
 

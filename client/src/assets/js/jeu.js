@@ -14,7 +14,7 @@ var config = {
 var game = new Phaser.Game(config);
 
 function preload (){
-    this.load.image('logo', './client/src/assets/img/bg_logo.png');
+    this.load.image('logo', 'assets/img/bg_logo.png');
 }
 
 function create ()
