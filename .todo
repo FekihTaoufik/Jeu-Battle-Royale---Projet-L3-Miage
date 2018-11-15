@@ -16,3 +16,10 @@ MODULE - GESTION DE PROJET
         ☐ version 1
         ☐ version 2
 
+#Logiciel
+
+    ☐ TexturePacker (pour créer la carte et les sprites au format json)
+
+#repo utiles
+
+    ☐ voir repo (nkholski/phaser3-es6-webpack/)
