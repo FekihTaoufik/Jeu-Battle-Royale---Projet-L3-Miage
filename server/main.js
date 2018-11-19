@@ -8,6 +8,7 @@ app.set('socketio', io);
 
 const path = require('path');
 app.use('/assets',express.static(path.resolve('./client/src/assets')));
+app.use('/src',express.static(path.resolve('./client/dist/src')));
 
 
 app.get('/',function(req,res){
