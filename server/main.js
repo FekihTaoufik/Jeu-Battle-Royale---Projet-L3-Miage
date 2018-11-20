@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var server = require('http').Server(app);
+const ENV = process.env.NODE_ENV || 'development';
 
 var io = require("socket.io")(server);
 require("./sockets/index.js")(io);
@@ -8,7 +9,10 @@ app.set('socketio', io);
 
 const path = require('path');
 app.use('/assets',express.static(path.resolve('./client/src/assets')));
-app.use('/src',express.static(path.resolve('./client/dist/src')));
+if(ENV == 'development')
+    app.use('/src',express.static(path.resolve('./client/dist/src')));
+    else
+    app.use('/',express.static(path.resolve('./client/dist')));
 
 
 app.get('/',function(req,res){
