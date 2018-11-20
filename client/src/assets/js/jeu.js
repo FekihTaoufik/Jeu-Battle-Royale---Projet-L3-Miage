@@ -154,19 +154,19 @@ function create ()
 
     // Stops player acceleration on uppress of WASD keys
 
-    this.input.keyboard.on('keyup_Down', function (event) {
+    this.input.keyboard.on('keyup_DOWN', function (event) {
         if (moveKeys['down'].isUp)
             player.setAccelerationY(0);
     });
-    this.input.keyboard.on('keyup_Up', function (event) {
+    this.input.keyboard.on('keyup_UP', function (event) {
         if (moveKeys['up'].isUp)
             player.setAccelerationY(0);
     });
-    this.input.keyboard.on('keyup_Right', function (event) {
+    this.input.keyboard.on('keyup_RIGHT', function (event) {
         if (moveKeys['right'].isUp)
             player.setAccelerationX(0);
     });
-    this.input.keyboard.on('keyup_Left', function (event) {
+    this.input.keyboard.on('keyup_LEFT', function (event) {
         if (moveKeys['left'].isUp)
             player.setAccelerationX(0);
     });
