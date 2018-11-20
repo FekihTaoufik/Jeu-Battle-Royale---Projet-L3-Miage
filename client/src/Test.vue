@@ -5,12 +5,24 @@
 </template>
 
 <script>
-import Jeu from "./assets/js/jeu.js";
+import Jeu from "./assets/js/main.js";
 export default {
     data(){
         return {
             
         }
+    },
+    sockets:{
+        pong(e){
+            console.log("RECEIVED : PONG");
+        }
+    },
+    mounted(){
+        var context = this;
+        setInterval(() => {
+            context.$socket.emit('test',true);
+            console.log("PINGED SERVER");
+        }, 2000);
     }
 }
 </script>
