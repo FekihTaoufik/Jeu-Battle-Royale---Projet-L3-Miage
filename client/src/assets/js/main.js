@@ -106,7 +106,7 @@ function create ()
     var background = this.add.image(800, 600, 'background');
     player = this.physics.add.sprite(800, 600, 'player_handgun');
     enemy = this.physics.add.sprite(300, 600, 'player_handgun');
-    reticle = this.physics.add.sprite(800, 700, 'target');
+    reticle = this.physics.add.sprite(800, 600, 'target'); 
     hp1 = this.add.image(-350, -250, 'target').setScrollFactor(0.5, 0.5);
     hp2 = this.add.image(-300, -250, 'target').setScrollFactor(0.5, 0.5);
     hp3 = this.add.image(-250, -250, 'target').setScrollFactor(0.5, 0.5);
@@ -115,7 +115,7 @@ function create ()
     background.setOrigin(0.5, 0.5).setDisplaySize(1600, 1200);
     player.setOrigin(0.5, 0.5).setDisplaySize(132, 120).setCollideWorldBounds(true).setDrag(500, 500);
     enemy.setOrigin(0.5, 0.5).setDisplaySize(132, 120).setCollideWorldBounds(true);
-    reticle.setOrigin(0.5, 0.5).setDisplaySize(25, 25).setCollideWorldBounds(true);
+    reticle.setOrigin(0.5, 0.5).setDisplaySize(100, 80).setCollideWorldBounds(true); //modification 
     hp1.setOrigin(0.5, 0.5).setDisplaySize(50, 50);
     hp2.setOrigin(0.5, 0.5).setDisplaySize(50, 50);
     hp3.setOrigin(0.5, 0.5).setDisplaySize(50, 50);
