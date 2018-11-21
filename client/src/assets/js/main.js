@@ -27,6 +27,12 @@ var config = {
     }
 };
 
+/*------------------------------------------------------------------------------------------------
+
+TOUT CECI DOIT ETRE TRANSFERE DANS DES CLASSES 
+
+-------------------------------------------------------------------------------------------------*/
+
 var game = new Phaser.Game(config);
 var player , enemy, reticle, hp1, hp2, hp3, playerBullets , enemyBullets,moveKeys;
 var Bullet = new Phaser.Class({
