@@ -89,8 +89,8 @@ function preload ()
     // Load in images and sprites
     this.load.atlas('player_handgun', `${base_url}sprites/idle_knife.png`,`${base_url}sprites/idle_knife.json` );
     this.load.image('bullet', `${base_url}health/sprite.png`);
-    this.load.image('target', `${base_url}demoscene/ball.png`);
-    this.load.image('background', `${base_url}skies/underwater1.png`);
+    //this.load.image('target', `${base_url}demoscene/ball.png`);
+    //this.load.image('background', `${base_url}skies/underwater1.png`);
 }
 
 function create ()
@@ -155,19 +155,19 @@ function create ()
     // Stops player acceleration on uppress of WASD keys
 
     this.input.keyboard.on('keyup_DOWN', function (event) {
-        if (moveKeys['down'].isUp)
+        //if (moveKeys['down'].isUp)
             player.setAccelerationY(0);
     });
     this.input.keyboard.on('keyup_UP', function (event) {
-        if (moveKeys['up'].isUp)
+        //if (moveKeys['up'].isUp)
             player.setAccelerationY(0);
     });
     this.input.keyboard.on('keyup_RIGHT', function (event) {
-        if (moveKeys['right'].isUp)
+        //if (moveKeys['right'].isUp)
             player.setAccelerationX(0);
     });
     this.input.keyboard.on('keyup_LEFT', function (event) {
-        if (moveKeys['left'].isUp)
+        //if (moveKeys['left'].isUp)
             player.setAccelerationX(0);
     });
 
