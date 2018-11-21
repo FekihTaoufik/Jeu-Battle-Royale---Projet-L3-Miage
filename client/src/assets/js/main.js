@@ -34,7 +34,8 @@ TOUT CECI DOIT ETRE TRANSFERE DANS DES CLASSES
 -------------------------------------------------------------------------------------------------*/
 
 var game = new Phaser.Game(config);
-var player , enemy, reticle, hp1, hp2, hp3, playerBullets , enemyBullets,moveKeys;
+var player , enemy, reticle, hp1, hp2, hp3, playerBullets , enemyBullets, FireLauncher, moveKeys;
+//les balles
 var Bullet = new Phaser.Class({
 
     Extends: Phaser.GameObjects.Image,
@@ -97,6 +98,7 @@ function preload ()
     this.load.image('bullet', `${base_url}bullets/bullet.png`);
     this.load.image('target', `${base_url}locker/locker.png`);
     this.load.image('background', `${base_url}map/green.png`);
+    this.load.image('FireLauncher', `${base_url}weaponIcon/FireLauncher.png`);
 }
 
 function create ()
