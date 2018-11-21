@@ -7,7 +7,7 @@
         <img src="./assets/img/bg_logo.png" alt="MiageWars">
         <div class="label"> Miage &nbsp;&nbsp;Wars </div>
         </div>
-      <div class="nb_players_in">Nombre de joueurs en ligne : 15 joueurs</div>
+      <div class="nb_players_in">Nombre de joueurs en ligne : {{players.length}} joueurs</div>
       <div class="start_div">
         <input placeholder="Saisir un pseudo" name="pseudo" id="player_pseudo" type="text" v-model="player.pseudo">
         <button id="start_game">Jouer</button>
@@ -46,6 +46,7 @@ export default {
       player:{
         pseudo:''
       },
+      players:[],
       records :[
         {
           pseudo : 'player',
@@ -58,6 +59,14 @@ export default {
   },
   name: 'app',
   components: {
+  },
+  sockets:{
+    players_list(players){
+      this.players = players;
+    }
+  },
+  mounted(){
+    this.$socket.emit('init_index');
   }
 }
 </script>
