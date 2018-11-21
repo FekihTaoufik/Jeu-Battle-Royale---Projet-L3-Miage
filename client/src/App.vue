@@ -40,7 +40,6 @@
 </template>
 
 <script>
-import jeu from './assets/js/jeu.js'
 export default {
   data(){
     return{
