@@ -87,10 +87,10 @@ var Bullet = new Phaser.Class({
 function preload ()
 {
     // Load in images and sprites
-    this.load.atlas('player_handgun', `${base_url}sprites/idle_knife.png`,`${base_url}sprites/idle_knife.json` );
-    this.load.image('bullet', `${base_url}health/sprite.png`);
-    this.load.image('target', `${base_url}demoscene/ball.png`);
-    this.load.image('background', `${base_url}skies/underwater1.png`);
+    this.load.atlas('player_handgun', `${base_url}sprites/idle_rifle.png`,`${base_url}sprites/idle_rifle.json` );
+    this.load.image('bullet', `${base_url}bullets/bullet.png`);
+    this.load.image('target', `${base_url}locker/locker.png`);
+    this.load.image('background', `${base_url}map/green.png`);
 }
 
 function create ()
@@ -106,7 +106,7 @@ function create ()
     var background = this.add.image(800, 600, 'background');
     player = this.physics.add.sprite(800, 600, 'player_handgun');
     enemy = this.physics.add.sprite(300, 600, 'player_handgun');
-    reticle = this.physics.add.sprite(800, 700, 'target');
+    reticle = this.physics.add.sprite(800, 600, 'target'); 
     hp1 = this.add.image(-350, -250, 'target').setScrollFactor(0.5, 0.5);
     hp2 = this.add.image(-300, -250, 'target').setScrollFactor(0.5, 0.5);
     hp3 = this.add.image(-250, -250, 'target').setScrollFactor(0.5, 0.5);
@@ -115,7 +115,7 @@ function create ()
     background.setOrigin(0.5, 0.5).setDisplaySize(1600, 1200);
     player.setOrigin(0.5, 0.5).setDisplaySize(132, 120).setCollideWorldBounds(true).setDrag(500, 500);
     enemy.setOrigin(0.5, 0.5).setDisplaySize(132, 120).setCollideWorldBounds(true);
-    reticle.setOrigin(0.5, 0.5).setDisplaySize(25, 25).setCollideWorldBounds(true);
+    reticle.setOrigin(0.5, 0.5).setDisplaySize(100, 80).setCollideWorldBounds(true); //modification 
     hp1.setOrigin(0.5, 0.5).setDisplaySize(50, 50);
     hp2.setOrigin(0.5, 0.5).setDisplaySize(50, 50);
     hp3.setOrigin(0.5, 0.5).setDisplaySize(50, 50);
@@ -154,20 +154,20 @@ function create ()
 
     // Stops player acceleration on uppress of WASD keys
 
-    this.input.keyboard.on('keyup_Down', function (event) {
-        if (moveKeys['down'].isUp)
+    this.input.keyboard.on('keyup_DOWN', function (event) {
+        //if (moveKeys['down'].isUp)
             player.setAccelerationY(0);
     });
-    this.input.keyboard.on('keyup_Up', function (event) {
-        if (moveKeys['up'].isUp)
+    this.input.keyboard.on('keyup_UP', function (event) {
+        //if (moveKeys['up'].isUp)
             player.setAccelerationY(0);
     });
-    this.input.keyboard.on('keyup_Right', function (event) {
-        if (moveKeys['right'].isUp)
+    this.input.keyboard.on('keyup_RIGHT', function (event) {
+        //if (moveKeys['right'].isUp)
             player.setAccelerationX(0);
     });
-    this.input.keyboard.on('keyup_Left', function (event) {
-        if (moveKeys['left'].isUp)
+    this.input.keyboard.on('keyup_LEFT', function (event) {
+        //if (moveKeys['left'].isUp)
             player.setAccelerationX(0);
     });
 
