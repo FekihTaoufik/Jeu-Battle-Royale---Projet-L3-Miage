@@ -88,8 +88,8 @@ function preload ()
 {
     // Load in images and sprites
     this.load.atlas('player_handgun', `${base_url}sprites/idle_knife.png`,`${base_url}sprites/idle_knife.json` );
-    this.load.image('bullet', `${base_url}health/sprite.png`);
-    //this.load.image('target', `${base_url}demoscene/ball.png`);
+    this.load.image('bullet', `${base_url}bullets/bullet.png`);
+    this.load.image('target', `${base_url}locker/locker.png`);
     //this.load.image('background', `${base_url}skies/underwater1.png`);
 }
 
