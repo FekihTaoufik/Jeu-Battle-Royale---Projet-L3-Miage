@@ -1,7 +1,7 @@
 {
   "apps": [{
     "name": "miagewars",
-    "script": "./server/main.js",
+    "script": "./server/index.js",
     "watch": true,
     "ignore_watch": [
       "*.json"

@@ -4,7 +4,7 @@
   "description": "C'est un jeu type battle royale",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./server/main.js",
+    "dev": "nodemon ./server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
