@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Jeu from "./assets/js/jeu.js";
+import Jeu from "./assets/js/main.js";
 export default {
     data(){
         return {
