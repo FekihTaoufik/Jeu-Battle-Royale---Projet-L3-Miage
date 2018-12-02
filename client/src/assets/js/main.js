@@ -4,6 +4,7 @@ var config = {
     type: Phaser.WEBGL,
     width: window.innerWidth,
     height: window.innerHeight,
+    parent:'phaser-app',
     physics: {
       default: 'arcade',
       arcade: {

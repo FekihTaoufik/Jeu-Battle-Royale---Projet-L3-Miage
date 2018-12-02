@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-// import App from './Test.vue'
 
 import io from 'socket.io-client';
 

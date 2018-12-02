@@ -1,16 +1,18 @@
 <template>
   <div id="app">
+    <game></game>
     <iframe  style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/c5LgV5bpV5A?controls=0&autoplay=1&start=3&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="main_div" v-if="!start_game">
     <div class="background"></div>
-    <div class="main_div">
+    <div class="interface-body">
       <div id="title_logo">
         <img src="./assets/img/bg_logo.png" alt="MiageWars">
         <div class="label"> Miage &nbsp;&nbsp;Wars </div>
         </div>
       <div class="nb_players_in">Nombre de joueurs en ligne : {{players.length}} joueurs</div>
       <div class="start_div">
-        <input placeholder="Saisir un pseudo" name="pseudo" id="player_pseudo" type="text" v-model="player.pseudo">
-        <button id="start_game">Jouer</button>
+        <input @keyup.enter.prevent="(e)=>{if(!player.pseudo=='') start_game=true; else alert('Un pseudo est obligatoire')}" placeholder="Saisir un pseudo" name="pseudo" id="player_pseudo" type="text" v-model="player.pseudo">
+        <button id="start_game" @click="(e)=>{if(!player.pseudo=='') start_game=true; else alert('Un pseudo est obligatoire')}">Jouer</button>
       </div>
       <div class="classement">
         <div class="classement_header">Classement <div style="float:right;">TOP 10</div></div>
@@ -35,14 +37,19 @@
           </table>
         </div>
       </div>
+
+    </div>
     </div>
   </div>
 </template>
 
 <script>
+import Game from './Game.vue'
 export default {
+  components:{'game':Game},
   data(){
     return{
+      start_game:false,
       player:{
         pseudo:''
       },
@@ -57,21 +64,43 @@ export default {
         ]
     }
   },
-  name: 'app',
-  components: {
+  methods:{
+    alert(msg){
+      alert(msg);
+    }
   },
+  name: 'app',
   sockets:{
     players_list(players){
       this.players = players;
     }
   },
   mounted(){
-    this.$socket.emit('init_index');
+    document.socket.emit('init_index');
   }
 }
 </script>
 
 <style>
+.main_div .background{
+  background-color: rgba(0,0,0,.5);
+
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+}
+.interface-body{
+  z-index:2;
+  position:relative;
+}
+.main_div{
+  position:fixed;
+  top:0;
+  z-index:1;
+  width:100%;
+  height:100%;
+}
 .classement table{
   font-family: 'Lato',sans-serif;
   background-color:#0063a9;
@@ -162,7 +191,7 @@ input#player_pseudo{
   text-align: center;
 }
 .main_div{
-  margin-top:250px;
+  padding-top:250px;
 }
 html,body,#app {
   overflow:hidden;
