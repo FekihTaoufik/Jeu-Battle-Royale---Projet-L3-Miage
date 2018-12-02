@@ -27,6 +27,12 @@ var config = {
     }
 };
 
+/*------------------------------------------------------------------------------------------------
+
+TOUT CECI DOIT ETRE TRANSFERE DANS DES CLASSES 
+
+-------------------------------------------------------------------------------------------------*/
+
 var game = new Phaser.Game(config);
 var players=[],player , enemy, reticle, hp1, hp2, hp3, playerBullets , enemyBullets,moveKeys;
 var Bullet = new Phaser.Class({
@@ -91,6 +97,9 @@ function preload ()
     this.load.image('bullet', `${base_url}bullets/bullet.png`);
     this.load.image('target', `${base_url}locker/locker.png`);
     this.load.image('background', `${base_url}map/green.png`);
+
+    this.load.image('FireLauncher', `${base_url}weaponIcon/FireLauncher.png`);
+
     document.socket.on('player_joined_game',function(p){
         console.log("player JOINED GAME",p);
         players[p.id]=p;
@@ -101,6 +110,7 @@ function preload ()
     document.socket.on('player_moving',function(p){
         players[p.id]=p;
     })
+
 }
 
 function create ()
