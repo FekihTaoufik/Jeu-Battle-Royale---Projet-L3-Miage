@@ -25,11 +25,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(p,i) in records" :key="i">
+              <tr v-for="(p,i) in records.concat(records,records,records)" :key="i">
                 <td>{{p.pseudo}}</td>
                 <td>{{p.kills}}</td>
                 <td>{{p.deaths}}</td>
-                <td>{{p.parties}}</td>
+                <td>{{p.games}}</td>
               </tr>
             </tbody>
           </table>
@@ -72,7 +72,14 @@ export default {
 </script>
 
 <style>
+.classement table{
+  font-family: 'Lato',sans-serif;
+  background-color:#0063a9;
+  padding:10px;
+}
 .classement .classement_header{
+  text-transform: uppercase;
+  font-weight:600;
   background-color:rgb(0, 150, 255);
   border-top-left-radius:5px;
   border-top-right-radius:5px;
