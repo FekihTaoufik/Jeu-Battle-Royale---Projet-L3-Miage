@@ -34,8 +34,7 @@ TOUT CECI DOIT ETRE TRANSFERE DANS DES CLASSES
 -------------------------------------------------------------------------------------------------*/
 
 var game = new Phaser.Game(config);
-var player , enemy, reticle, hp1, hp2, hp3, playerBullets , enemyBullets, FireLauncher, moveKeys;
-//les balles
+var players=[],player , enemy, reticle, hp1, hp2, hp3, playerBullets , enemyBullets,moveKeys;
 var Bullet = new Phaser.Class({
 
     Extends: Phaser.GameObjects.Image,
@@ -98,7 +97,20 @@ function preload ()
     this.load.image('bullet', `${base_url}bullets/bullet.png`);
     this.load.image('target', `${base_url}locker/locker.png`);
     this.load.image('background', `${base_url}map/green.png`);
+
     this.load.image('FireLauncher', `${base_url}weaponIcon/FireLauncher.png`);
+
+    document.socket.on('player_joined_game',function(p){
+        console.log("player JOINED GAME",p);
+        players[p.id]=p;
+    });
+    document.socket.on('player_left_game',function(p){
+        delete players[p];
+    });
+    document.socket.on('player_moving',function(p){
+        players[p.id]=p;
+    })
+
 }
 
 function create ()
@@ -113,6 +125,9 @@ function create ()
     // Add background player, enemy, reticle, healthpoint sprites
     var background = this.add.image(800, 600, 'background');
     player = this.physics.add.sprite(800, 600, 'player_handgun');
+    player.id = document.socket.id;
+    document.socket.emit('join_game',player);
+
     enemy = this.physics.add.sprite(300, 600, 'player_handgun');
     reticle = this.physics.add.sprite(800, 600, 'target'); 
     hp1 = this.add.image(-350, -250, 'target').setScrollFactor(0.5, 0.5);
@@ -149,15 +164,19 @@ function create ()
 
     this.input.keyboard.on('keydown_UP', function (event) {
         player.setAccelerationY(-800);
+        document.socket.emit("player_moving",player);
     });
     this.input.keyboard.on('keydown_DOWN', function (event) {
         player.setAccelerationY(800);
+        document.socket.emit("player_moving",player);
     });
     this.input.keyboard.on('keydown_LEFT', function (event) {
         player.setAccelerationX(-800);
+        document.socket.emit("player_moving",player);
     });
     this.input.keyboard.on('keydown_RIGHT', function (event) {
         player.setAccelerationX(800);
+        document.socket.emit("player_moving",player);
     });
 
     // Stops player acceleration on uppress of WASD keys
@@ -324,25 +343,42 @@ function constrainReticle(reticle)
     else if (distY < -600)
         reticle.y = player.y-600;
 }
-
+var tempPlayer = {x:0,y:0,rotation:0};
 function update (time, delta)
 {
     // Rotates player to face towards reticle
-    player.rotation = Phaser.Math.Angle.Between(player.x, player.y, reticle.x, reticle.y);
+    for(var pId in players){
+        if(pId==document.socket.id){
+            player.rotation = Phaser.Math.Angle.Between(player.x, player.y, reticle.x, reticle.y);
+            constrainVelocity(p, 500);
+        }else{
 
-    // Rotates enemy to face towards player
-    enemy.rotation = Phaser.Math.Angle.Between(enemy.x, enemy.y, player.x, player.y);
-
-    //Make reticle move with player
-    reticle.body.velocity.x = player.body.velocity.x;
-    reticle.body.velocity.y = player.body.velocity.y;
-
-    // Constrain velocity of player
-    constrainVelocity(player, 500);
-
-    // Constrain position of constrainReticle
-    constrainReticle(reticle);
-
-    // Make enemy fire
-    enemyFire(enemy, player, time, this);
+            var p = players[pId]
+            p.rotation = Phaser.Math.Angle.Between(p.x, p.y, reticle.x, reticle.y);
+            constrainVelocity(p, 500);
+            
+        }
+        // Rotates enemy to face towards p
+        // enemy.rotation = Phaser.Math.Angle.Between(enemy.x, enemy.y, p.x, p.y);
+    
+        //Make reticle move with p
+        // reticle.body.velocity.x = p.body.velocity.x;
+        // reticle.body.velocity.y = p.body.velocity.y;
+    
+        // Constrain velocity of p
+    
+        // Constrain position of constrainReticle
+        // constrainReticle(reticle);
+        
+        // Make enemy fire
+        // enemyFire(enemy, p, time, this);
+    }
+    if(tempPlayer.rotation != player.rotation || tempPlayer.x != player.x || tempPlayer.y != player.y ){
+        document.socket.emit('player_moving',player);
+    }
+    tempPlayer = {
+        x:player.x,
+        y:player.y,
+        rotation:player.rotation
+    };
 }

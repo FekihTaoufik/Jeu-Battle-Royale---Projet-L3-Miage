@@ -1,14 +1,12 @@
 import Vue from 'vue'
-// import App from './App.vue'
-import App from './Test.vue'
-import VueSocketIO from 'vue-socket.io'
+import App from './App.vue'
+// import App from './Test.vue'
+
+import io from 'socket.io-client';
+
+document.socket = io('http://localhost:9000');
 
 Vue.config.productionTip = false
-
-Vue.use(new VueSocketIO({
-  debug: true,
-  connection: 'http://localhost:9000',
-}))
 
 new Vue({
   render: h => h(App),

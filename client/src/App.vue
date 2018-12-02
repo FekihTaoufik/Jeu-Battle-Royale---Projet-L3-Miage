@@ -7,7 +7,7 @@
         <img src="./assets/img/bg_logo.png" alt="MiageWars">
         <div class="label"> Miage &nbsp;&nbsp;Wars </div>
         </div>
-      <div class="nb_players_in">Nombre de joueurs en ligne : 15 joueurs</div>
+      <div class="nb_players_in">Nombre de joueurs en ligne : {{players.length}} joueurs</div>
       <div class="start_div">
         <input placeholder="Saisir un pseudo" name="pseudo" id="player_pseudo" type="text" v-model="player.pseudo">
         <button id="start_game">Jouer</button>
@@ -25,11 +25,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(p,i) in records" :key="i">
+              <tr v-for="(p,i) in records.concat(records,records,records)" :key="i">
                 <td>{{p.pseudo}}</td>
                 <td>{{p.kills}}</td>
                 <td>{{p.deaths}}</td>
-                <td>{{p.parties}}</td>
+                <td>{{p.games}}</td>
               </tr>
             </tbody>
           </table>
@@ -40,13 +40,13 @@
 </template>
 
 <script>
-import jeu from './assets/js/jeu.js'
 export default {
   data(){
     return{
       player:{
         pseudo:''
       },
+      players:[],
       records :[
         {
           pseudo : 'player',
@@ -59,12 +59,27 @@ export default {
   },
   name: 'app',
   components: {
+  },
+  sockets:{
+    players_list(players){
+      this.players = players;
+    }
+  },
+  mounted(){
+    this.$socket.emit('init_index');
   }
 }
 </script>
 
 <style>
+.classement table{
+  font-family: 'Lato',sans-serif;
+  background-color:#0063a9;
+  padding:10px;
+}
 .classement .classement_header{
+  text-transform: uppercase;
+  font-weight:600;
   background-color:rgb(0, 150, 255);
   border-top-left-radius:5px;
   border-top-right-radius:5px;

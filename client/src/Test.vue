@@ -13,16 +13,8 @@ export default {
         }
     },
     sockets:{
-        pong(e){
-            console.log("RECEIVED : PONG");
-        }
     },
     mounted(){
-        var context = this;
-        setInterval(() => {
-            context.$socket.emit('test',true);
-            console.log("PINGED SERVER");
-        }, 2000);
     }
 }
 </script>
