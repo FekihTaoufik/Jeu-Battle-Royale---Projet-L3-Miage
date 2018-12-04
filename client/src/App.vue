@@ -9,7 +9,7 @@
         <img src="./assets/img/bg_logo.png" alt="MiageWars">
         <div class="label"> Miage &nbsp;&nbsp;Wars </div>
         </div>
-      <div class="nb_players_in">Nombre de joueurs en ligne : {{players.length}} joueurs</div>
+      <div class="nb_players_in">Nombre de joueurs en ligne : {{connected_players}} joueurs</div>
       <div class="start_div">
         <input @keyup.enter.prevent="(e)=>{if(!player.pseudo=='') start_game=true; else alert('Un pseudo est obligatoire')}" placeholder="Saisir un pseudo" name="pseudo" id="player_pseudo" type="text" v-model="player.pseudo">
         <button id="start_game" @click="(e)=>{if(!player.pseudo=='') start_game=true; else alert('Un pseudo est obligatoire')}">Jouer</button>
@@ -53,7 +53,7 @@ export default {
       player:{
         pseudo:''
       },
-      players:[],
+      players:{},
       records :[
         {
           pseudo : 'player',
@@ -75,8 +75,14 @@ export default {
       this.players = players;
     }
   },
+  computed:{
+    connected_players(){
+      return Object.keys(_.filter(this.players,(o,i)=>{return i!=document.socket.id})).length;
+    }
+  },
   mounted(){
-    document.socket.emit('init_index');
+    document.socket.emit('init_index')
+    document.socket.on('players_list',(players)=>{this.players = players})
   }
 }
 </script>

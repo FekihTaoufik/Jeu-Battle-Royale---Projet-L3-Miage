@@ -11,7 +11,7 @@ module.exports = (io) => {
             pseudo: null
         };
         console.log(`➕  Joueur ${client.id} s'est connecté`)
-        console.log(`📢  Joueurs connecté : ${players.length}`,players)
+        console.log(`📢  Joueurs connecté : ${Object.keys(players).length}`)
         client.broadcast.emit('players_list',players)
         client.on('disconnect',()=>{
             console.log(`➖  Joueur ${client.id} s'est déconnecté`)
