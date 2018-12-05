@@ -35,7 +35,7 @@ TOUT CECI DOIT ETRE TRANSFERE DANS DES CLASSES
 -------------------------------------------------------------------------------------------------*/
 
 var game = new Phaser.Game(config);
-var players=[],player , enemy, reticle, hp1, hp2, hp3, playerBullets , enemyBullets,moveKeys;
+var players= [], player, enemy, reticle, hp1, hp2, hp3, playerBullets, enemyBullets, moveKeys;
 var Bullet = new Phaser.Class({
 
     Extends: Phaser.GameObjects.Image,
@@ -98,20 +98,21 @@ function preload ()
     this.load.image('bullet', `${base_url}bullets/bullet.png`);
     this.load.image('target', `${base_url}locker/locker.png`);
     this.load.image('background', `${base_url}map/green.png`);
-
     this.load.image('FireLauncher', `${base_url}weaponIcon/FireLauncher.png`);
 
-    document.socket.on('player_joined_game',function(p){
+    document.socket.on('player_joined_game',function(p)
+    {
         console.log("player JOINED GAME",p);
         players[p.id]=p;
     });
-    document.socket.on('player_left_game',function(p){
+    document.socket.on('player_left_game',function(p)
+    {
         delete players[p];
     });
-    document.socket.on('player_moving',function(p){
+    document.socket.on('player_moving',function(p)
+    {
         players[p.id]=p;
     })
-
 }
 
 function create ()
@@ -129,7 +130,7 @@ function create ()
     player.id = document.socket.id;
     document.socket.emit('join_game',player);
 
-    enemy = this.physics.add.sprite(300, 600, 'player_handgun');
+
     reticle = this.physics.add.sprite(800, 600, 'target'); 
     hp1 = this.add.image(-350, -250, 'target').setScrollFactor(0.5, 0.5);
     hp2 = this.add.image(-300, -250, 'target').setScrollFactor(0.5, 0.5);
@@ -138,7 +139,6 @@ function create ()
     // Set image/sprite properties
     background.setOrigin(0.5, 0.5).setDisplaySize(1600, 1200);
     player.setOrigin(0.5, 0.5).setDisplaySize(132, 120).setCollideWorldBounds(true).setDrag(500, 500);
-    enemy.setOrigin(0.5, 0.5).setDisplaySize(132, 120).setCollideWorldBounds(true);
     reticle.setOrigin(0.5, 0.5).setDisplaySize(100, 80).setCollideWorldBounds(true); //modification 
     hp1.setOrigin(0.5, 0.5).setDisplaySize(50, 50);
     hp2.setOrigin(0.5, 0.5).setDisplaySize(50, 50);
@@ -146,8 +146,6 @@ function create ()
 
     // Set sprite variables
     player.health = 3;
-    enemy.health = 3;
-    enemy.lastFired = 0;
 
     // Set camera properties
     this.cameras.main.zoom = 0.5;
@@ -210,7 +208,6 @@ function create ()
         if (bullet)
         {
             bullet.fire(player, reticle);
-            this.physics.add.collider(enemy, bullet, enemyHitCallback);
         }
     }, this);
 
@@ -236,24 +233,24 @@ function create ()
 
 }
 
-function enemyHitCallback(enemyHit, bulletHit)
-{
-    // Reduce health of enemy
-    if (bulletHit.active === true && enemyHit.active === true)
-    {
-        enemyHit.health = enemyHit.health - 1;
-        // console.log("Enemy hp: ", enemyHit.health);
+// function enemyHitCallback(enemyHit, bulletHit)
+// {
+//     // Reduce health of enemy
+//     if (bulletHit.active === true && enemyHit.active === true)
+//     {
+//         enemyHit.health = enemyHit.health - 1;
+//         // console.log("Enemy hp: ", enemyHit.health);
 
-        // Kill enemy if health <= 0
-        if (enemyHit.health <= 0)
-        {
-           enemyHit.setActive(false).setVisible(false);
-        }
+//         // Kill enemy if health <= 0
+//         if (enemyHit.health <= 0)
+//         {
+//            enemyHit.setActive(false).setVisible(false);
+//         }
 
-        // Destroy bullet
-        bulletHit.setActive(false).setVisible(false);
-    }
-}
+//         // Destroy bullet
+//         bulletHit.setActive(false).setVisible(false);
+//     }
+// }
 
 function playerHitCallback(playerHit, bulletHit)
 {
@@ -283,28 +280,28 @@ function playerHitCallback(playerHit, bulletHit)
     }
 }
 
-function enemyFire(enemy, player, time, gameObject)
-{
-    if (enemy.active === false)
-    {
-        return;
-    }
+// function enemyFire(enemy, player, time, gameObject)
+// {
+//     if (enemy.active === false)
+//     {
+//         return;
+//     }
 
-    if ((time - enemy.lastFired) > 1000)
-    {
-        enemy.lastFired = time;
+//     if ((time - enemy.lastFired) > 1000)
+//     {
+//         enemy.lastFired = time;
 
-        // Get bullet from bullets group
-        var bullet = enemyBullets.get().setActive(true).setVisible(true);
+//         // Get bullet from bullets group
+//         var bullet = enemyBullets.get().setActive(true).setVisible(true);
 
-        if (bullet)
-        {
-            bullet.fire(enemy, player);
-            // Add collider between bullet and player
-            gameObject.physics.add.collider(player, bullet, playerHitCallback);
-        }
-    }
-}
+//         if (bullet)
+//         {
+//             bullet.fire(enemy, player);
+//             // Add collider between bullet and player
+//             gameObject.physics.add.collider(player, bullet, playerHitCallback);
+//         }
+//     }
+// }
 
 // Ensures sprite speed doesnt exceed maxVelocity while update is called
 function constrainVelocity(sprite, maxVelocity)
@@ -344,7 +341,9 @@ function constrainReticle(reticle)
     else if (distY < -600)
         reticle.y = player.y-600;
 }
+
 var tempPlayer = {x:0,y:0,rotation:0};
+
 function update (time, delta)
 {
     // Rotates player to face towards reticle
@@ -353,7 +352,6 @@ function update (time, delta)
             player.rotation = Phaser.Math.Angle.Between(player.x, player.y, reticle.x, reticle.y);
             constrainVelocity(p, 500);
         }else{
-
             var p = players[pId]
             p.rotation = Phaser.Math.Angle.Between(p.x, p.y, reticle.x, reticle.y);
             constrainVelocity(p, 500);
