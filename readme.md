@@ -43,13 +43,18 @@ Au lancement du lien :
 - pas de kit de soin et pas de shield pour la version 1
 
 ## Démo
+
 Une démo est disponible sur le site [www.miagination.fr](www.miagination.fr), mais elle n'est pas toujours a jour.
 *Il est préférable de cloner le dépôt et de lancer l'application sur l'une des branches master/game_dev.*
+
 ## Installation et usage
+
 ### Requis
 
  - [Nodejs](https://nodejs.org/en/)
-###Démarche
+
+###Commande pour démarrer la démo 
+
 Pour faire marcher notre application il faut lancer le serveur de développement pour compiler les fichiers ( .vue principalement ) et notre serveur principale qui va servir les fichiers assets pour le jeu et socketio pour le système de multijoueur.
 
 
@@ -64,6 +69,8 @@ Pour faire marcher notre application il faut lancer le serveur de développement
 > 
 > 3) Démarrage du serveur principale (dans une autre console)
 > `npm run server` 
+
+  4) Il vous suffit de rentrer dans votre moteur de recherche favori "http://loclahost:8080/"
 
 ## Equipe de travail :
 Professeur encadrant : [M. Michel BUFFA](https://github.com/micbuffa)
