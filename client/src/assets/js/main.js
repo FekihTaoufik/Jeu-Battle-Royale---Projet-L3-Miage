@@ -100,10 +100,14 @@ function preload ()
     this.load.image('background', `${base_url}map/green.png`);
 
     this.load.image('FireLauncher', `${base_url}weaponIcon/FireLauncher.png`);
-
+    
+    document.socket.on('players_list',function(ps){
+        players=ps;
+        console.log("players list",players);
+    });
     document.socket.on('player_joined_game',function(p){
-        console.log("player JOINED GAME",p);
         players[p.id]=p;
+        console.log("player JOINED GAME",p,players);
     });
     document.socket.on('player_left_game',function(p){
         delete players[p];
