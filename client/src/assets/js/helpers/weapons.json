@@ -1,0 +1,53 @@
+[
+    {
+    "label": "handgun",
+    "auto_shoot":false,
+    "states": [{
+        "label": "idle",
+        "start": 0,
+        "end": 19
+    },{
+        "label": "meleeattack",
+        "start": 0,
+        "end": 14
+    },{
+        "label": "reload",
+        "start": 0,
+        "end": 14
+    },{
+        "label": "shoot",
+        "start": 0,
+        "end": 2
+    },{
+        "label": "move",
+        "start": 0,
+        "end": 19
+    }
+    ]
+},
+{
+    "label": "rifle",
+    "states": [{
+        "label": "idle",
+        "start": 0,
+        "end": 19
+    },{
+        "label": "meleeattack",
+        "start": 0,
+        "end": 14
+    },{
+        "label": "reload",
+        "start": 0,
+        "end": 19
+    },{
+        "label": "shoot",
+        "start": 0,
+        "end": 2
+    },{
+        "label": "move",
+        "start": 0,
+        "end": 19
+    }
+    ]
+}
+]

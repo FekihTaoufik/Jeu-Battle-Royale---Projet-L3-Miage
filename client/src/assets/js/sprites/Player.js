@@ -1,73 +1,89 @@
-class Player 
+//import Weapon from './Weapon'
+export default class Player extends Phaser.GameObjects.Sprite
 {
-    //constructeur
-    constructor()
+    constructor(config) {
+        super(config.scene, config.x, config.y, config.key)
+        config.scene.physics.world.enable(this)
+        config.scene.add.existing(this)
+        this.acceleration = 1000
+        this.body.maxVelocity.x = 500
+        this.body.maxVelocity.y = 500
+        this.state='idle'
+        this.weapon = 'handgun'
+        this.anims.play(`player_${this.weapon}_idle`)
+        //this.weapon = new Weapon()
+        this.on('animationcomplete', function (anim, frame) {
+            this.idle()
+          }, this);
+    }
+    attack(){
+        if(!this.anims.isPlaying || this.anims.getCurrentKey().indexOf('idle')!=-1 ){
+            this.anims.play(`player_${this.weapon}_${this.weapon=='knife'?'meleeattack':'shoot'}`)
+        }
+    }
+    idle(){
+        if(this.anims.getCurrentKey().indexOf('idle')!=-1)
+        this.anims.play(`player_${this.weapon}_idle`,true)
+    }
+    move(){
+        if(this.anims.getCurrentKey().indexOf('move')!=-1)
+            this.anims.play(`player_${this.weapon}_move`,true)
+    }
+    constrainVelocity(maxVelocity)
     {
-        //sa position dans la map
-        this.x = Math.random()*1600; //tmp
-        this.y = Math.random()*1200; //tmp
-        //barre de vie
-        this.health = 100;
-        //temps en jeu 
-        this.time = 0;
-        //son id en jeu
-        this.player = 'player'; //tmp
-        //position du viseur 
-        this.reticle.x = 0;
-        this.retiche.y = 0;
-        //action tirer
-        this.playerBullets = false;
-        //action bouger
-        this.move = false; //par défaut, le joueur ne bouge pas
-
-        //les commandes pour controler le personnage
-        moveKeys = this.input.keyboard.addKeys({
-            'up': Phaser.Input.Keyboard.KeyCodes.UP,
-            'down': Phaser.Input.Keyboard.KeyCodes.DOWN,
-            'left': Phaser.Input.Keyboard.KeyCodes.LEFT,
-            'right': Phaser.Input.Keyboard.KeyCodes.RIGHT
-        });
-
-        //commandes pour ramasser une arme
-        takeWeapon = Phaser.Input.Keyboard.KeyCodes.Enter;
+        if (!this || !this.body)
+        return;
+  
+      var angle, currVelocitySqr, vx, vy;
+      vx = this.body.velocity.x;
+      vy = this.body.velocity.y;
+      currVelocitySqr = vx * vx + vy * vy;
+  
+      if (currVelocitySqr > maxVelocity * maxVelocity)
+      {
+          angle = Math.atan2(vy, vx);
+          vx = Math.cos(angle) * maxVelocity;
+          vy = Math.sin(angle) * maxVelocity;
+          this.body.velocity.x = vx;
+          this.body.velocity.y = vy;
+      }
+    }
+    runX(vel) {
+        this.body.setAccelerationX(vel)
+    }
+    runY(vel) {
+        this.body.setAccelerationY(vel)
     }
 
-    seDeplacer()
-    {
-        //si on actionne 
-        this.input.keyboard.on('keydown_UP', function (event) {
-            player.setAccelerationY(-800);
-        });
-        this.input.keyboard.on('keydown_DOWN', function (event) {
-            player.setAccelerationY(800);
-        });
-        this.input.keyboard.on('keydown_LEFT', function (event) {
-            player.setAccelerationX(-800);
-        });
-        this.input.keyboard.on('keydown_RIGHT', function (event) {
-            player.setAccelerationX(800);
-        });
-        //on modifie l'etat 'move'
-        this.move = true;
-    }
+    update(keys,reticle,time,delta,socket){
+        var old = {
+            x:this.x,
+            y:this.y,
+            rotation:this.rotation
+        }
 
-    immobile()
-    {
-        this.input.keyboard.on('keyup_DOWN', function (event) {
-            player.setAccelerationY(0);
-        });
-        this.input.keyboard.on('keyup_UP', function (event) {
-            player.setAccelerationY(0);
-        });
-        this.input.keyboard.on('keyup_RIGHT', function (event) {
-            player.setAccelerationX(0);
-        });
-        this.input.keyboard.on('keyup_LEFT', function (event) {
-            player.setAccelerationX(0);
-        });
-        //on modifie son etat
-        this.move = true;
-    }
+        this.rotation = Phaser.Math.Angle.Between(this.x, this.y, reticle.x, reticle.y)-0.1
+        // console.log(input)
+        if(!keys.up.isDown || !keys.down.isDown){
+            this.runY(-this.body.velocity.y*2);
+        }
+        if(!keys.right.isDown || !keys.left.isDown){
+            this.runX(-this.body.velocity.x*2);
+        }
+            this.constrainVelocity(500)
 
-    
+
+        if (keys.up.isDown) this.runY(-800)
+        if (keys.down.isDown) this.runY(800)
+        if (keys.right.isDown) this.runX(800)
+        if (keys.left.isDown) this.runX(-800)
+        if(keys.up.isDown || keys.down.isDown || keys.right.isDown || keys.left.isDown)
+            this.move()
+            else
+            this.idle()
+
+            
+            if(old.rotation != this.rotation ||old.x != this.x ||old.y != this.y)
+                socket.emit('player_moving',this)
+    }
 }

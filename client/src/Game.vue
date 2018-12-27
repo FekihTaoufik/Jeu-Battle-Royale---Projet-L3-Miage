@@ -1,23 +1,36 @@
 <template>
-        <div id="phaser-app"></div>
+        <div id="phaser-app" @mousedown="handleMouseDown"></div>
 </template>
 
 <script>
 import Jeu from "./assets/js/main.js";
+var game
 export default {
     name:'game',
     data(){
         return {
-            
+            jeu :{}
         }
     },
     sockets:{
     },
-    mounted(){
+    methods:{
+        handleMouseDown(){
+            game.input.mouse.requestPointerLock();
+        }
+    },
+    created(){  
+        game = Jeu.start(document.socket)
     }
 }
 </script>
 <style>
+body,html{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+}
 #phaser-app{
     width:100%;
     height:100%;
