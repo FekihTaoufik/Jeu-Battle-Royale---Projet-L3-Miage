@@ -64,20 +64,20 @@ export default class Player extends Phaser.GameObjects.Sprite
 
         this.rotation = Phaser.Math.Angle.Between(this.x, this.y, reticle.x, reticle.y)-0.1
         // console.log(input)
-        if(!keys.up.isDown || !keys.down.isDown){
+        if(!keys.up.isDown || !keys.down.isDown || !!keys._up.isDown || !keys._down.isDown){
             this.runY(-this.body.velocity.y*2);
         }
-        if(!keys.right.isDown || !keys.left.isDown){
+        if(!keys.right.isDown || !keys.left.isDown || !!keys._right.isDown || !keys._left.isDown){
             this.runX(-this.body.velocity.x*2);
         }
             this.constrainVelocity(500)
 
 
-        if (keys.up.isDown) this.runY(-800)
-        if (keys.down.isDown) this.runY(800)
-        if (keys.right.isDown) this.runX(800)
-        if (keys.left.isDown) this.runX(-800)
-        if(keys.up.isDown || keys.down.isDown || keys.right.isDown || keys.left.isDown)
+        if (keys._up.isDown || keys.up.isDown) this.runY(-800)
+        if (keys._down.isDown || keys.down.isDown) this.runY(800)
+        if (keys._right.isDown || keys.right.isDown) this.runX(800)
+        if (keys._left.isDown || keys.left.isDown) this.runX(-800)
+        if(keys.up.isDown || keys.down.isDown || keys.right.isDown || keys.left.isDown || keys._up.isDown || keys._down.isDown || keys._right.isDown || keys._left.isDown)
             this.move()
             else
             this.idle()
