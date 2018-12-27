@@ -90,6 +90,10 @@ export default class GameScene extends Phaser.Scene {
             down: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S),
             left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Q),
             right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D),
+            _up: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP),
+            _down: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN),
+            _left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT),
+            _right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
             mouse:{x:0,y:0,isDown:false,isLocked:false}
         };
 
