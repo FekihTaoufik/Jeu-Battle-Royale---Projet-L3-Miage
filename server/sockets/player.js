@@ -39,9 +39,11 @@ module.exports = (io) => {
             player.id = client.id;
             client.broadcast.emit('player_moving', player)
         })
-        client.on('player_shooting', (o) => {
-            //var  o = { player : player , bullet : bullet}
-            client.broadcast.emit('player_shooting', o)
+        client.on('player_shooting', (config) => {
+            client.broadcast.emit('player_shooting', config)
+        })
+        client.on('player_reloading', () => {
+            client.broadcast.emit('player_reloading',client.id)
         })
         client.on('player_died', (player) => {
             client.broadcast.emit('player_died', player)

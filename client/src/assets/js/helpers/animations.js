@@ -18,7 +18,7 @@ function animation_create(scene) {
             var config = {
                 key: `player_${wp.label}_${s.label}`,
                 frames: [],
-                frameRate: 25,
+                frameRate: typeof s.frameRate!='undefined'?s.frameRate:25,
                 repeat: typeof s.repeat !='undefined'?s.repeat:-1
             };
             for (let i = s.start; i <= s.end; i++){

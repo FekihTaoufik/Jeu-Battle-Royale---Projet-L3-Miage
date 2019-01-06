@@ -4,6 +4,8 @@ export default class Reticle extends Phaser.GameObjects.Sprite
         super(config.scene, config.x, config.y, config.key);
         config.scene.physics.world.enable(this);
         config.scene.add.existing(this);
+        this.depth=11
+        this.setScale(0.2)
         // this.acceleration = 600;
         // this.body.maxVelocity.x = 200;
         // this.body.maxVelocity.y = 500;

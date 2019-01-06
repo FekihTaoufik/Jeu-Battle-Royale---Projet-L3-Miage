@@ -1,5 +1,7 @@
 import _ from 'lodash'
 import Player from './../sprites/Player'
+import HealthBar from './../sprites/HealthBar'
+import Bullet from './../sprites/Bullet'
 import Reticle from './../sprites/Reticle'
 import {animation_load,animation_create} from './../helpers/animations'
 const base_url = '/assets/img/game/'
@@ -15,6 +17,7 @@ export default class GameScene extends Phaser.Scene {
         this.load.path= base_url
         this.load.image('background', `map/green.png`)
         this.load.image('reticle', `locker/locker.png`)
+        this.load.image('bullet', `bullets/bullet.png`)
             this.load.audio('rifle_shoot', [ 'sounds/rifle.wav','sounds/rifle.mp3' ]);
         animation_load(this)
         this.socket.on('players_list',(list)=>{
@@ -23,18 +26,18 @@ export default class GameScene extends Phaser.Scene {
                 if(this.players[id] != undefined)
                     return
                 this.players[id] = new Player({
+                    socketid : id,
                     scene: this,
                     key: p.textureKey,
                     x: p.x,
                     y: p.y,
                     rotation:p.rotation
                 })
-                this.players[id].setDisplaySize(132, 120)
             })
         })
         this.socket.on('player_moving',(p)=>{
             if(this.players[p.id] == undefined)
-            return
+                return
             this.players[p.id].x = p.x
             this.players[p.id].y = p.y
             this.players[p.id].rotation = p.rotation
@@ -43,33 +46,52 @@ export default class GameScene extends Phaser.Scene {
             this.players[id].destroy()
             delete this.players[id]
         })
+        
+        this.socket.on('player_reloading',(id)=>{
+            console.log(id,this.players[id])
+            this.players[id].reload()
+        })
+        this.socket.on('player_shooting',(config)=>{
+            console.log("Une balle a été tiré")
+            var b = this.bullets 
+            var bullet = this.bullets.get(this).setActive(true).setVisible(true);
+        if (bullet) {
+            bullet.fire(config.player, config.reticle);
+            this.physics.add.collider(this.player, bullet, this.player.hitCallback());
+        }
+        })
         this.socket.on('player_joined_game',(p)=>{
             console.log("Players joined the game ",p)
             if(this.players[p.id] != undefined)
             return;
             this.players[p.id] = new Player({
+                socketid : p.id,
                 scene: this,
                 key: p.textureKey,
                 x: p.x,
                 y: p.y,
                 rotation:p.rotation
             })
-            this.players[p.id].setDisplaySize(132, 120)
         })
         
     }
     create(){
         animation_create(this)
         var first = this.sound.add('rifle_shoot',{rate:10});
-        this.physics.world.setBounds(0, 0, 1600, 1200)
+        this.physics.world.setBounds(this.sys.game.config.width/2, this.sys.game.config.height/2, 1600, 1200)
         var background = this.add.image(1600, 1200, 'background')
         this.player = new Player({
+            socketid : this.socket.id,
             scene: this,
             key: 'player_knife_idle_0',
-            x: this.sys.game.config.width/2,
-            y: this.sys.game.config.height/2,
+            x: this.sys.game.config.width/1.5,
+            y: this.sys.game.config.height/1.5,
             rotation:50
         })
+        this.bullets = this.physics.add.group({
+            classType: Bullet,
+            // maxSize: 10,
+            runChildUpdate: true});
         this.socket.emit('join_game',this.player)
         this.reticle = new Reticle({ 
             scene: this,
@@ -78,12 +100,8 @@ export default class GameScene extends Phaser.Scene {
             y: this.sys.game.config.height/2,
         }
             )
-        this.cameras.main.zoom = 0.8;
+        this.cameras.main.zoom = 0.9;
         this.cameras.main.startFollow(this.player)
-
-        this.player.setDisplaySize(132, 120)
-        this.reticle.setDisplaySize(50, 50);
-
 
         this.keys = {
             up: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Z),
@@ -104,16 +122,50 @@ export default class GameScene extends Phaser.Scene {
                this.reticle.y += pointer.movementY
             }
         }, this);
-
-        this.input.on('pointerdown', function (pointer) { this.keys.mouse.isDown=true
-            this.player.attack()
-            first.play()
+        /*
+        FOR TEST
+        */
+       var fire_auto =[]
+       this.input.on('pointerdown', function (pointer) { this.keys.mouse.isDown=true
+        this.player.attack()
+        var bullet = this.bullets.get(this).setActive(true).setVisible(true);
+        if (bullet)
+        {
+            this.socket.emit('player_shooting',{player:this.player,reticle:this.reticle})
+            bullet.fire(this.player, this.reticle);
+            // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback()); })
+        }
+        fire_auto.push(setInterval(() => {
+            console.log("IN THE INTERVAL");
+            var bullet = this.bullets.get(this).setActive(true).setVisible(true);
+            if (bullet)
+            {
+                this.socket.emit('player_shooting',{player:this.player,reticle:this.reticle})
+                bullet.fire(this.player, this.reticle);
+                // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback()); })
+                }
+            }, 100))
             
         }, this);
         this.input.on('pointerup', function (pointer) { 
             this.keys.mouse.isDown=false 
-            this.player.idle()
+            console.log("Pointer UP")
+            this.player.idle();
+            _.map(fire_auto,(o)=>{
+                clearInterval(o)
+            })
         }, this);
+        this.input.keyboard.on('keydown', function (event) {
+            
+            if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.R)
+            {
+                this.player.reload()
+                this.socket.emit('player_reloading')
+                
+
+            }
+    
+        },this);
     }
     update(time,delta){
         this.player.update(this.keys,this.reticle, time, delta,this.socket);
