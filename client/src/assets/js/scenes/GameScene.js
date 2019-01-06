@@ -18,7 +18,7 @@ export default class GameScene extends Phaser.Scene {
         this.load.image('background', `map/green.png`)
         this.load.image('reticle', `locker/locker.png`)
         this.load.image('bullet', `bullets/bullet.png`)
-            this.load.audio('rifle_shoot', [ 'sounds/rifle.wav','sounds/rifle.mp3' ]);
+        this.load.audio('rifle_shoot', [ 'sounds/rifle.wav','sounds/rifle.mp3' ]);
         animation_load(this)
         this.socket.on('players_list',(list)=>{
             console.log("Received players List",list)

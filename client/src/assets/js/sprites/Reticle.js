@@ -22,10 +22,10 @@ export default class Reticle extends Phaser.GameObjects.Sprite
             this.x = player.x-800;
     
         if (distY > 600)
-        this.y = player.y+600;
+            this.y = player.y+600;
         else if (distY < -600)
             this.y = player.y-600;
-        }
+    }
     update(keys,player,time,delta){
         this.body.velocity.x = player.body.velocity.x;
         this.body.velocity.y = player.body.velocity.y;
