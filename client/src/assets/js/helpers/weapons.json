@@ -1,0 +1,87 @@
+[
+    {
+    "label": "handgun",
+    "auto_shoot":false,
+    "states": [{
+        "label": "idle",
+        "start": 0,
+        "end": 19
+    },{
+        "label": "meleeattack",
+        "start": 0,
+        "end": 14
+    },{
+        "label": "reload",
+        "start": 0,
+        "end": 14,
+        "frameRate":30,
+        "repeat":false
+    },{
+        "label": "shoot",
+        "start": 0,
+        "end": 2,
+        "frameRate":30,
+        "repeat":false
+    },{
+        "label": "move",
+        "start": 0,
+        "end": 19
+    }
+    ]
+},
+{
+    "label": "rifle",
+    "states": [{
+        "label": "idle",
+        "start": 0,
+        "end": 19
+    },{
+        "label": "meleeattack",
+        "start": 0,
+        "end": 14
+    },{
+        "label": "reload",
+        "start": 0,
+        "end": 19,
+        "frameRate":30,
+        "repeat":false
+    },{
+        "label": "shoot",
+        "start": 0,
+        "end": 2
+    },{
+        "label": "move",
+        "start": 0,
+        "end": 19
+    }
+    ]
+},{
+    "label": "shotgun",
+    "states": [{
+        "label": "idle",
+        "start": 0,
+        "end": 19
+    },{
+        "label": "meleeattack",
+        "start": 0,
+        "end": 14
+    },{
+        "label": "reload",
+        "start": 0,
+        "end": 19,
+        "frameRate":30,
+        "repeat":true
+    },{
+        "label": "shoot",
+        "start": 0,
+        "end": 2,
+        "frameRate":30,
+        "repeat":false
+    },{
+        "label": "move",
+        "start": 0,
+        "end": 19
+    }
+    ]
+}
+]

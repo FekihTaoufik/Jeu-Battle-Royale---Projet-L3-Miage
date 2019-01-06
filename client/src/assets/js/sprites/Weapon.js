@@ -1,4 +1,4 @@
-class Weapon
+export default class Weapon extends Phaser.GameObjects.Sprite
 {
     /* TYPE ARMES (leur puissance)
         1 : FAIBLES
@@ -8,10 +8,10 @@ class Weapon
     constructor()
     {
         //sa position
-        this.x = Math.random()*1600;    //tmp
-        this.y = Math.random()*1200;    //tmp
+        this.x = 0;    //tmp
+        this.y = 0;    //tmp
         //son type
-        this.name = 'weapon';
+        this.name = 'knife';
         this.type = Math.random()*3; //on gere la frequence d'apparition des armes en fct du type dans la version 1
         //portée de l'arme
         this.portee = 0;
