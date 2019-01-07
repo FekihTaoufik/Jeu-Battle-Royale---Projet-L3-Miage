@@ -1,0 +1,14 @@
+{ "columns":18,
+ "image":"TilesetSnow.png",
+ "imageheight":1774,
+ "imagewidth":590,
+ "margin":0,
+ "name":"TilesetSnow",
+ "spacing":0,
+ "tilecount":990,
+ "tiledversion":"1.2.1",
+ "tileheight":32,
+ "tilewidth":32,
+ "type":"tileset",
+ "version":1.2
+}
