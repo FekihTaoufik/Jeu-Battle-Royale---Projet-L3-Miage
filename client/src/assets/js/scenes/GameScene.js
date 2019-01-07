@@ -21,7 +21,7 @@ export default class GameScene extends Phaser.Scene {
         this.load.audio('rifle_shoot', [ 'sounds/rifle.wav','sounds/rifle.mp3' ]);
         animation_load(this)
         this.socket.on('players_list',(list)=>{
-            console.log("Received players List",list)
+            // console.log("Received players List",list)
             _.map(list,(p,id)=>{
                 if(this.players[id] != undefined)
                     return
@@ -48,11 +48,11 @@ export default class GameScene extends Phaser.Scene {
         })
         
         this.socket.on('player_reloading',(id)=>{
-            console.log(id,this.players[id])
+            // console.log(id,this.players[id])
             this.players[id].reload()
         })
         this.socket.on('player_shooting',(config)=>{
-            console.log("Une balle a été tiré")
+            // console.log("Une balle a été tiré")
             var b = this.bullets 
             var bullet = this.bullets.get(this).setActive(true).setVisible(true);
         if (bullet) {
@@ -61,7 +61,7 @@ export default class GameScene extends Phaser.Scene {
         }
         })
         this.socket.on('player_joined_game',(p)=>{
-            console.log("Players joined the game ",p)
+            // console.log("Players joined the game ",p)
             if(this.players[p.id] != undefined)
             return;
             this.players[p.id] = new Player({
@@ -92,7 +92,7 @@ export default class GameScene extends Phaser.Scene {
             classType: Bullet,
             // maxSize: 10,
             runChildUpdate: true});
-        this.socket.emit('join_game',this.player)
+        
         this.reticle = new Reticle({ 
             scene: this,
             key: 'reticle',
@@ -136,7 +136,7 @@ export default class GameScene extends Phaser.Scene {
             // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback()); })
         }
         fire_auto.push(setInterval(() => {
-            console.log("IN THE INTERVAL");
+            // console.log("IN THE INTERVAL");
             var bullet = this.bullets.get(this).setActive(true).setVisible(true);
             if (bullet)
             {
@@ -149,7 +149,7 @@ export default class GameScene extends Phaser.Scene {
         }, this);
         this.input.on('pointerup', function (pointer) { 
             this.keys.mouse.isDown=false 
-            console.log("Pointer UP")
+            // console.log("Pointer UP")
             this.player.idle();
             _.map(fire_auto,(o)=>{
                 clearInterval(o)
@@ -166,6 +166,7 @@ export default class GameScene extends Phaser.Scene {
             }
     
         },this);
+        this.socket.emit('join_game',this.player)
     }
     update(time,delta){
         this.player.update(this.keys,this.reticle, time, delta,this.socket);
