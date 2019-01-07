@@ -2,7 +2,7 @@ export default class Bullet extends Phaser.GameObjects.Image
 {
     constructor(config)
     {
-        console.log("CREATED BULLET",config);
+        //console.log("CREATED BULLET",config);
         super(config,config.player.x,config.player.y,'bullet')
         this.speed = 1.3;
         this.born = 0;
@@ -25,7 +25,6 @@ export default class Bullet extends Phaser.GameObjects.Image
     {       
         this.setPosition(shooter.x+(Math.cos(shooter.rotation)*this.offset.x), shooter.y+(Math.sin(shooter.rotation)*this.offset.y)); // Initial position
         this.direction = Math.atan( (target.x-this.x) / (target.y-this.y));
-
         // Calculate X and y velocity of bullet to moves it from shooter to target
         if (target.y >= this.y)
         {
@@ -37,11 +36,10 @@ export default class Bullet extends Phaser.GameObjects.Image
             this.xSpeed = -this.speed*Math.sin(this.direction);
             this.ySpeed = -this.speed*Math.cos(this.direction);
         }
-
         this.rotation = shooter.rotation; // angle bullet with shooters rotation
         this.born = 0; // Time since new bullet spawned
     }
-
+    
     // Updates the position of the bullet each cycle
     update(time, delta)
     {
