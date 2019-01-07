@@ -100,10 +100,9 @@ export default class Player extends Phaser.GameObjects.Sprite {
         this.body.setAccelerationY(vel)
     }
 
-    update(keys, reticle, time, delta, socket)
-    {
-        if(this.health<=0)
-            return;
+    update(keys, reticle, time, delta, socket) {
+        // if(this.health<=0)
+        //     return;
         var old = {
             x: this.x,
             y: this.y,
@@ -132,10 +131,8 @@ export default class Player extends Phaser.GameObjects.Sprite {
             if (old.rotation != this.rotation || old.x != this.x || old.y != this.y)
             socket.emit('player_moving', this)
     }
-
-    die()
-    {
-        this.destroy();
+    die(){
+        // this.destroy();
     }
 
     hitCallback(bullet)
