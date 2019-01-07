@@ -84,8 +84,8 @@ export default class Player extends Phaser.GameObjects.Sprite {
     }
 
     update(keys, reticle, time, delta, socket) {
-        if(this.health<=0)
-            return;
+        // if(this.health<=0)
+        //     return;
         var old = {
             x: this.x,
             y: this.y,
@@ -114,7 +114,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
     }
     die(){
-        this.destroy();
+        // this.destroy();
     }
     hitCallback(bullet){
         if(this.health>0){
