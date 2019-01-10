@@ -59,7 +59,8 @@ progressBox.destroy();
         // this.load.image('background', `map/green.png`)
         this.load.image('reticle', `locker/locker.png`)
         this.load.image('bullet', `bullets/bullet.png`)
-        this.load.audio('rifle_shoot', [ 'sounds/rifle.wav','sounds/rifle.mp3' ]);
+        this.load.audio('dead', [ 'sounds/oh-no-im-dead.mp3']);
+        this.load.audio('rifle_shoot', [ 'sounds/pew.mp3']);
         animation_load(this)
         this.socket.on('players_list',(list)=>{
             // console.log("Received players List",list)
@@ -134,7 +135,6 @@ progressBox.destroy();
 
 
 
-        var first = this.sound.add('rifle_shoot',{rate:10});
         this.physics.world.setBounds(0, 0, 1600, 1200)
         // var background = this.add.image(1600, 1200, 'tiles')
         this.player = new Player({
@@ -193,22 +193,23 @@ progressBox.destroy();
         var bullet = this.bullets.get(this).setActive(true).setVisible(true);
         if (bullet)
         {
-            this.socket.emit('player_shooting',{player:this.player,reticle:this.reticle})
-            bullet.fire(this.player, this.reticle);
-            // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback); })
+            var rifle_shoot_sound = this.sound.add('rifle_shoot',{rate:1});
+            rifle_shoot_sound.play();
         }
         fire_auto.push(setInterval(() => {
             // console.log("IN THE INTERVAL");
             var bullet = this.bullets.get(this).setActive(true).setVisible(true);
             if (bullet)
             {
+                var rifle_shoot_sound = this.sound.add('rifle_shoot',{rate:1})
+                rifle_shoot_sound.play()
                 this.socket.emit('player_shooting',{player:this.player,reticle:this.reticle})
                 bullet.fire(this.player, this.reticle);
                 // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback); })
                 }
             }, 100))
             
-        }, this);
+        }, this)
         this.input.on('pointerup', function (pointer) { 
             if(this.player.isDead)
                 return

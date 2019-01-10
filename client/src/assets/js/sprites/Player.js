@@ -11,6 +11,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
         this.body.setSize(150,140)
         this.body.setOffset(50,55)
         this.socket = config.scene.socket
+        this.scene=config.scene
         this.setScale(0.5)
         this.depth = 10
         this.setOrigin(0.4,0.6)
@@ -137,6 +138,8 @@ export default class Player extends Phaser.GameObjects.Sprite {
         this.isDead=true;
         if(typeof emit != 'undefined'){
             if(emit){
+                var dead = this.scene.sound.add('dead',{rate:1})
+                dead.play()
                 this.socket.emit('player_died')
             }
         }
