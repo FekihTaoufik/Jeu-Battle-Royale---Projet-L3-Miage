@@ -4,9 +4,16 @@
 
 <script>
 import Jeu from "./assets/js/main.js";
-var game
+var game;
 export default {
     name:'game',
+    props:['startGame','pseudo'],
+    watch:{
+        startGame(newV,oldV){
+            if(newV)
+                game = Jeu.start(document.socket,this.pseudo)
+        },
+    },
     data(){
         return {
             jeu :{}
@@ -20,7 +27,6 @@ export default {
         }
     },
     created(){  
-        game = Jeu.start(document.socket)
     }
 }
 </script>

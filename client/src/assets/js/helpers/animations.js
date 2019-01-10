@@ -3,6 +3,7 @@ import weapon_states from './weapons.json'
 const base_url = '/assets/img/game/'
 
 function animation_load(scene) {
+    scene.load.image(`rip`, `rip.png`)
     weapon_states.forEach(wp => {
         wp.states.forEach(s => {
             for (let i = s.start; i <= s.end; i++)

@@ -1,14 +1,19 @@
-class HealthBar {
-
-    constructor (scene, x, y)
+export default class HealthBar extends Phaser.GameObjects.Graphics{
+    constructor (scene, x, y,show)
     {
-        this.bar = new Phaser.GameObjects.Graphics(scene);
-        this.x = x;
-        this.y = y;
+        super(scene)
         this.value = 100;
         this.p = 76 / 100;
-        this.draw();
-        scene.add.existing(this.bar);
+        this.x = 150;
+        this.y = 150;
+        this.distant = !show
+        if(show){
+            console.log("Showing healthbar")
+            this.draw();
+            this.depth = 15
+            this.setScrollFactor(0);
+            scene.add.existing(this);
+        }
     }
 
     decrease (amount)
@@ -18,29 +23,30 @@ class HealthBar {
         {
             this.value = 0;
         }
-        this.draw();
+        if(!this.distant)
+            this.draw();
         return (this.value === 0);
     }
 
     draw ()
     {
-        this.bar.clear();
+        this.clear();
         //BG
-        this.bar.fillStyle(0x000000);
-        this.bar.fillRect(this.x, this.y, 80, 16);
+        this.fillStyle(0x000000);
+        this.fillRect(this.x, this.y, 80, 16);
         //Health
-        this.bar.fillStyle(0xffffff);
-        this.bar.fillRect(this.x + 2, this.y + 2, 76, 12);
+        this.fillStyle(0xffffff);
+        this.fillRect(this.x + 2, this.y + 2, 76, 12);
         if (this.value < 30)
         {
-            this.bar.fillStyle(0xff0000);
+            this.fillStyle(0xff0000);
         }
         else
         {
-            this.bar.fillStyle(0x00ff00);
+            this.fillStyle(0x00ff00);
         }
         var d = Math.floor(this.p * this.value);
-        this.bar.fillRect(this.x + 2, this.y + 2, d, 12);
+        this.fillRect(this.x + 2, this.y + 2, d, 12);
     }
 
 }

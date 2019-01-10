@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <game></game>
-    <iframe  style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/c5LgV5bpV5A?controls=0&autoplay=1&start=3&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <game :startGame="start_game" :pseudo="player.pseudo"></game>
+    <iframe v-if="!start_game"  style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/c5LgV5bpV5A?controls=0&autoplay=1&start=3&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="main_div" v-if="!start_game">
     <div class="background"></div>
     <div class="interface-body">
@@ -9,10 +9,10 @@
         <img src="./assets/img/bg_logo.png" alt="MiageWars">
         <div class="label"> Miage &nbsp;&nbsp;Wars </div>
         </div>
-      <div class="nb_players_in">Nombre de joueurs en ligne : {{connected_players}} joueurs</div>
+      <div class="nb_players_in">Nombre de joueurs en ligne : {{players_count}} joueurs</div>
       <div class="start_div">
-        <input @keyup.enter.prevent="(e)=>{if(!player.pseudo=='') start_game=true; else alert('Un pseudo est obligatoire')}" placeholder="Saisir un pseudo" name="pseudo" id="player_pseudo" type="text" v-model="player.pseudo">
-        <button id="start_game" @click="(e)=>{if(!player.pseudo=='') start_game=true; else alert('Un pseudo est obligatoire')}">Jouer</button>
+        <input @keyup.enter.prevent="handleGameStart" placeholder="Saisir un pseudo" name="pseudo" id="player_pseudo" type="text" v-model="player.pseudo">
+        <button id="start_game" @click="handleGameStart">Jouer</button>
       </div>
       <div class="classement">
         <div class="classement_header">Classement <div style="float:right;">TOP 10</div></div>
@@ -53,7 +53,7 @@ export default {
       player:{
         pseudo:''
       },
-      players:{},
+      players_count:0,
       records :[
         {
           pseudo : 'player',
@@ -65,24 +65,21 @@ export default {
     }
   },
   methods:{
-    alert(msg){
-      alert(msg);
-    }
+    handleGameStart(){
+      if(this.player.pseudo.length>=3){
+        this.start_game=true; 
+      }
+        else
+        alert('Un pseudo est obligatoire (aumoins 3 lettres)')
+    },
   },
   name: 'app',
-  sockets:{
-    players_list(players){
-      this.players = players;
-    }
-  },
-  computed:{
-    connected_players(){
-      return Object.keys(_.filter(this.players,(o,i)=>{return i!=document.socket.id})).length;
-    }
-  },
   mounted(){
-    document.socket.emit('init_index')
-    document.socket.on('players_list',(players)=>{this.players = players})
+    document.socket.emit('init_index');
+    document.socket.on('players_count',(count)=>{
+      console.log("GOT COUNT");
+      this.players_count = count;
+      })
   }
 }
 </script>

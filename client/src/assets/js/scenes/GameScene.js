@@ -6,16 +6,57 @@ import Reticle from './../sprites/Reticle'
 import {animation_load,animation_create} from './../helpers/animations'
 const base_url = '/assets/img/game/'
 export default class GameScene extends Phaser.Scene {
-    constructor(socketio) {
+    constructor(socketio,pseudo) {
         super({
             key: 'GameScene'
         })
         this.socket = socketio
+        this.playerPseudo = pseudo
     }
     preload(){
+        var lifeBar
+        var progressBar = this.add.graphics();
+        var progressBox = this.add.graphics();
+        progressBox.fillStyle(0x222222, 0.8);
+        progressBox.fillRect(240, 270, 320, 50);
+
+        this.load.on('progress', function (value) {
+    console.log(value);
+    progressBar.clear();
+    progressBar.fillStyle(0xffffff, 1);
+    progressBar.fillRect(250, 280, 300 * value, 30);
+        });
+                    
+        this.load.on('fileprogress', function (file) {
+            console.log(file.src);
+        });
+         
+        this.load.on('complete', function () {
+            console.log('complete');
+progressBar.destroy();
+progressBox.destroy();
+        });
+
+
         this.players={}
         this.load.path= base_url
-        this.load.image('background', `map/green.png`)
+
+
+
+
+
+
+
+  this.load.image("tiles", "map/TilesetSnow.png");
+  this.load.tilemapTiledJSON("map", "map/MaMap.json");
+
+
+
+
+
+
+
+        // this.load.image('background', `map/green.png`)
         this.load.image('reticle', `locker/locker.png`)
         this.load.image('bullet', `bullets/bullet.png`)
         this.load.audio('rifle_shoot', [ 'sounds/rifle.wav','sounds/rifle.mp3' ]);
@@ -31,7 +72,8 @@ export default class GameScene extends Phaser.Scene {
                     key: p.textureKey,
                     x: p.x,
                     y: p.y,
-                    rotation:p.rotation
+                    rotation:p.rotation,
+                    makeHealthBar:false
                 })
             })
         })
@@ -46,6 +88,9 @@ export default class GameScene extends Phaser.Scene {
             this.players[id].destroy()
             delete this.players[id]
         })
+        this.socket.on('player_died',(id)=>{
+            this.players[id].die(false)
+        })
         
         this.socket.on('player_reloading',(id)=>{
             // console.log(id,this.players[id])
@@ -57,7 +102,7 @@ export default class GameScene extends Phaser.Scene {
             var bullet = this.bullets.get(this).setActive(true).setVisible(true);
         if (bullet) {
             bullet.fire(config.player, config.reticle);
-            this.physics.add.collider(this.player, bullet, this.player.hitCallback());
+            this.physics.add.collider(this.player, bullet, this.player.hitCallback);
         }
         })
         this.socket.on('player_joined_game',(p)=>{
@@ -70,24 +115,38 @@ export default class GameScene extends Phaser.Scene {
                 key: p.textureKey,
                 x: p.x,
                 y: p.y,
-                rotation:p.rotation
+                rotation:p.rotation,
+                makeHealthBar:false
             })
         })
         
     }
     create(){
         animation_create(this)
+        
+        const map = this.make.tilemap({ key: "map" });
+  const tileset = map.addTilesetImage("tileset", "tiles");
+
+  const worldLayer = map.createStaticLayer("Monde", tileset, 0, 0);
+  const collideLayer = map.createStaticLayer("Collision", tileset, 0, 0);
+
+
+
+
+
         var first = this.sound.add('rifle_shoot',{rate:10});
-        this.physics.world.setBounds(this.sys.game.config.width/2, this.sys.game.config.height/2, 1600, 1200)
-        var background = this.add.image(1600, 1200, 'background')
+        this.physics.world.setBounds(0, 0, 1600, 1200)
+        // var background = this.add.image(1600, 1200, 'tiles')
         this.player = new Player({
             socketid : this.socket.id,
             scene: this,
             key: 'player_knife_idle_0',
             x: this.sys.game.config.width/1.5,
             y: this.sys.game.config.height/1.5,
-            rotation:50
+            rotation:50,
+            makeHealthBar:true
         })
+        this.physics.add.collider(this.player, collideLayer);
         this.bullets = this.physics.add.group({
             classType: Bullet,
             // maxSize: 10,
@@ -100,7 +159,7 @@ export default class GameScene extends Phaser.Scene {
             y: this.sys.game.config.height/2,
         }
             )
-        this.cameras.main.zoom = 0.9;
+        this.cameras.main.zoom = 0.8;
         this.cameras.main.startFollow(this.player)
 
         this.keys = {
@@ -126,14 +185,17 @@ export default class GameScene extends Phaser.Scene {
         FOR TEST
         */
        var fire_auto =[]
-       this.input.on('pointerdown', function (pointer) { this.keys.mouse.isDown=true
+       this.input.on('pointerdown', function (pointer) {
+           if(this.player.isDead)
+            return
+        this.keys.mouse.isDown=true
         this.player.attack()
         var bullet = this.bullets.get(this).setActive(true).setVisible(true);
         if (bullet)
         {
             this.socket.emit('player_shooting',{player:this.player,reticle:this.reticle})
             bullet.fire(this.player, this.reticle);
-            // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback()); })
+            // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback); })
         }
         fire_auto.push(setInterval(() => {
             // console.log("IN THE INTERVAL");
@@ -142,12 +204,14 @@ export default class GameScene extends Phaser.Scene {
             {
                 this.socket.emit('player_shooting',{player:this.player,reticle:this.reticle})
                 bullet.fire(this.player, this.reticle);
-                // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback()); })
+                // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback); })
                 }
             }, 100))
             
         }, this);
         this.input.on('pointerup', function (pointer) { 
+            if(this.player.isDead)
+                return
             this.keys.mouse.isDown=false 
             // console.log("Pointer UP")
             this.player.idle();
@@ -156,6 +220,8 @@ export default class GameScene extends Phaser.Scene {
             })
         }, this);
         this.input.keyboard.on('keydown', function (event) {
+            if(this.player.isDead)
+                return
             
             if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.R)
             {

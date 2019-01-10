@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './Game.vue'
+import App from './App.vue'
 import io from 'socket.io-client'
 document.socket = io(document.URL.includes('localhost')?'http://localhost:9000':document.URL)
 import _ from 'lodash';    

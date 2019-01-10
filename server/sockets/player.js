@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const mo = require('moment')
 module.exports = (io) => {
-    var players = {}
+    var connected = {}
     var game = {
         players: {}
     }
@@ -10,17 +10,19 @@ module.exports = (io) => {
             id: client.id,
             pseudo: null
         }
-        players[client.id] = client.player;
+        connected[client.id] = client.player;
+        client.broadcast.emit('players_count',Object.keys(connected).length-1)
         console.log(`➕  Joueur ${client.id} s'est connecté`)
-        console.log(`📢  Joueurs connecté : ${Object.keys(players).length}`)
+        console.log(`📢  Joueurs connecté : ${Object.keys(connected).length}`)
         client.on('disconnect', () => {
             console.log(`➖  Joueur ${client.id} s'est déconnecté`)
-            delete players[client.id];
-            console.log(`📢  Joueurs connecté : ${players.length}`, players)
+            delete connected[client.id];
+            console.log(`📢  Joueurs connecté : ${Object.keys(connected).length}`, game.players)
             client.broadcast.emit('player_disconnected',client.id)
             // leave game
             delete game.players[client.id];
             client.broadcast.emit('player_quit_game', client.id);
+            client.broadcast.emit('players_count',Object.keys(connected).length-1)
         })
         client.on('quit_game', (player) => {
             delete game.players[client.id];
@@ -29,13 +31,13 @@ module.exports = (io) => {
         client.on('join_game', (player) => {
             game.players[client.id] = player;
             player.id = client.id;
-            _players = _.clone(players)
+            _players = _.clone(game.players)
             delete _players[client.id]
             client.emit('players_list',_players)
             client.broadcast.emit('player_joined_game', player);
         })
         client.on('player_moving', (player) => {
-            players[client.id] = player;
+            game.players[client.id] = player;
             player.id = client.id;
             client.broadcast.emit('player_moving', player)
         })
@@ -46,15 +48,13 @@ module.exports = (io) => {
             client.broadcast.emit('player_reloading',client.id)
         })
         client.on('player_died', (player) => {
-            client.broadcast.emit('player_died', player)
+            client.broadcast.emit('player_died', client.id)
         })
         client.on('player_revived', (player) => {
             client.broadcast.emit('player_revived', player)
         })
         client.on('init_index', () => {
-            client.emit('players_list', _.filter(players, (o, i) => {
-                return _.toString(i) != _.toString(client.id)
-            }))
+            client.emit('players_count',Object.keys(connected).length-1)
         })
     })
 }

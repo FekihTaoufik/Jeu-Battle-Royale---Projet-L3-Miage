@@ -1,19 +1,19 @@
-import Bullet from "./Bullet";
 
-//import Weapon from './Weapon'
+import HealthBar from './HealthBar'
 export default class Player extends Phaser.GameObjects.Sprite {
     constructor(config) 
     {
         console.log("CREATED PLAYER",config);
         super(config.scene, config.x, config.y, config.key)
         config.scene.physics.world.enable(this)
-        config.scene.add.existing(this)
-        this.setDisplaySize(312, 206)
-        this.setSize(312, 206,true)
+        this.isDead=false
+        this.setDisplaySize(70, 70)
+        this.body.setSize(150,140)
+        this.body.setOffset(50,55)
+        this.socket = config.scene.socket
         this.setScale(0.5)
         this.depth = 10
-        this.setOrigin(0.3,0.6)
-        this.socketid = config.socketid
+        this.setOrigin(0.4,0.6)
         this.acceleration = 1000
         this.body.maxVelocity.x = 500
         this.body.maxVelocity.y = 500
@@ -22,7 +22,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
         this.anims.play(`player_${this.weapon}_idle`)
         //this.setSize(50,10, true);
         //this.weapon = new Weapon()
-        this.health = 100
+        this.health = new HealthBar(config.scene, this.x, this.y,config.makeHealthBar);
         this.on('animationcomplete', function(anim, frame){
             if (anim.key.includes('reload'))
             {
@@ -32,6 +32,8 @@ export default class Player extends Phaser.GameObjects.Sprite {
         }, this);
         // Weapon and bullets
         // this.bullets = config.scene.physics.add.group({classType:Bullet,runChildUpdate:true},config)
+        console.log(this,'HERE IS THE PLAYA')
+        config.scene.add.existing(this)
     }
     
     attack()
@@ -101,8 +103,8 @@ export default class Player extends Phaser.GameObjects.Sprite {
     }
 
     update(keys, reticle, time, delta, socket) {
-        // if(this.health<=0)
-        //     return;
+        if(this.isDead)
+            return;
         var old = {
             x: this.x,
             y: this.y,
@@ -129,23 +131,37 @@ export default class Player extends Phaser.GameObjects.Sprite {
             this.move()
         
             if (old.rotation != this.rotation || old.x != this.x || old.y != this.y)
-            socket.emit('player_moving', this)
+            this.socket.emit('player_moving', this)
     }
-    die(){
-        // this.destroy();
+    die(emit){
+        this.isDead=true;
+        if(typeof emit != 'undefined'){
+            if(emit){
+                this.socket.emit('player_died')
+            }
+        }
+                else
+                this.socket.emit('player_died')
+        this.anims.stop()
+        this.setTexture('rip')
+        if(this.setActive(false))
+            return true;
     }
 
-    hitCallback(bullet)
+    hitCallback(enemyHit, bulletHit)
     {
-        if(this.health>0)
+        
+        
+        if(enemyHit.health.value>0)
         {
-            this.health-=1;
+            enemyHit.health.decrease(1);
         }
-        else
+        else if (!this.isDread)
         {
-            this.die();
+            enemyHit.die(true);
             //console.log("THIS GUY IS DEAD")
         }
-        //console.log(this.socketid," GOT HIT MY HEALTH IS NOW ",this.health , bullet)
+        
+        console.log(enemyHit.socket.id," GOT HIT MY HEALTH IS NOW ",enemyHit.health.value)
     }
 }
