@@ -11,7 +11,6 @@ export default {
         height: window.innerHeight,
         parent:'phaser-app',
         physics: {
-    
           default: 'arcade',
           arcade: {
             // gravity: { y: 0 },
@@ -23,6 +22,7 @@ export default {
           Game_scene
         ]
     };
-    return new Phaser.Game(config)
+    var game =  new Phaser.Game(config)
+  return game;
   } 
 }
