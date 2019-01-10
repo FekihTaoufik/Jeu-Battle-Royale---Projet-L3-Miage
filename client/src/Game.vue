@@ -1,22 +1,38 @@
 <template>
-        <div id="phaser-app" @mousedown="handleMouseDown"></div>
+<div>
+        <dead v-if="isDead" :kills="myKills()"></dead>
+        <score-table v-show="gameStarted" :table='table' style="z-index:11;"></score-table>
+        <div style="z-index:10" id="phaser-app" @mousedown="handleMouseDown"></div>
+    </div> 
 </template>
 
 <script>
 import Jeu from "./assets/js/main.js";
+import scoreTable from './scoreTable.vue';
+import dead from './dead.vue';
+
 var game;
 export default {
+    components:{
+        'score-table':scoreTable,
+        'dead':dead
+    },
     name:'game',
     props:['startGame','pseudo'],
     watch:{
         startGame(newV,oldV){
-            if(newV)
-                game = Jeu.start(document.socket,this.pseudo)
+            if(newV){
+                document.socket.vue = this
+                game = Jeu.start(document.socket)
+            }
         },
     },
     data(){
         return {
-            jeu :{}
+            jeu :{},
+            table:[],
+            gameStarted:false,
+            isDead:false
         }
     },
     sockets:{
@@ -24,7 +40,16 @@ export default {
     methods:{
         handleMouseDown(){
             game.input.mouse.requestPointerLock();
-        }
+        },
+        myKills(){
+            for (let i = 0; i < this.table.length; i++) {
+                const t = this.table[i];
+                if(t.id == document.socket.id)
+                    return t.score
+                
+            }
+            return 0;
+        },
     },
     created(){  
     }

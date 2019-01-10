@@ -5,12 +5,13 @@ export default class Player extends Phaser.GameObjects.Sprite {
     {
         console.log("CREATED PLAYER",config);
         super(config.scene, config.x, config.y, config.key)
+        this.pseudo = config.pseudo
         config.scene.physics.world.enable(this)
         this.isDead=false
         this.setDisplaySize(70, 70)
         this.body.setSize(150,140)
         this.body.setOffset(50,55)
-        this.socket = config.scene.socket
+        this.socket = config.socket
         this.scene=config.scene
         this.setScale(0.5)
         this.depth = 10
@@ -134,17 +135,23 @@ export default class Player extends Phaser.GameObjects.Sprite {
             if (old.rotation != this.rotation || old.x != this.x || old.y != this.y)
             this.socket.emit('player_moving', this)
     }
-    die(emit){
-        this.isDead=true;
-        if(typeof emit != 'undefined'){
+    die(emit,killerId){
+        if(this.isDead)
+            return;
+
+            this.body.setAccelerationX(0)
+            this.body.setAccelerationY(0)
+            this.isDead=true;
             if(emit){
                 var dead = this.scene.sound.add('dead',{rate:1})
                 dead.play()
-                this.socket.emit('player_died')
+                this.socket.emit('player_died',{killerId:killerId})
+                this.socket.vue.isDead=true;
+                _.map(this.socket.vue.table,(k,key)=>{
+                    if(k.id == killerId)
+                    this.socket.vue.table[key].score++;
+                })
             }
-        }
-                else
-                this.socket.emit('player_died')
         this.anims.stop()
         this.setTexture('rip')
         if(this.setActive(false))
@@ -153,16 +160,17 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
     hitCallback(enemyHit, bulletHit)
     {
-        
-        
+        if ( enemyHit.socket.id == bulletHit.playerId ){
+            return;
+        }
+        bulletHit.clear()
         if(enemyHit.health.value>0)
         {
-            enemyHit.health.decrease(1);
+            enemyHit.health.decrease(Math.round(Math.random()*10));
         }
         else if (!this.isDread)
         {
-            enemyHit.die(true);
-            //console.log("THIS GUY IS DEAD")
+            enemyHit.die(true,bulletHit.playerId);
         }
         
         console.log(enemyHit.socket.id," GOT HIT MY HEALTH IS NOW ",enemyHit.health.value)

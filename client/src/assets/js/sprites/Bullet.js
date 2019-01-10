@@ -21,6 +21,10 @@ export default class Bullet extends Phaser.GameObjects.Image
     }
 
     // Fires a bullet from the player to the reticle
+    clear(){
+        this.setActive(false).setVisible(false)
+        this.destroy();
+    }
     fire(shooter, target)
     {       
         this.setPosition(shooter.x+(Math.cos(shooter.rotation)*this.offset.x), shooter.y+(Math.sin(shooter.rotation)*this.offset.y)); // Initial position
@@ -50,6 +54,7 @@ export default class Bullet extends Phaser.GameObjects.Image
         {
             this.setActive(false);
             this.setVisible(false);
+            this.destroy();
         }
     }
 }

@@ -5,16 +5,19 @@ import Bullet from './../sprites/Bullet'
 import Reticle from './../sprites/Reticle'
 import {animation_load,animation_create} from './../helpers/animations'
 const base_url = '/assets/img/game/'
+const spawns = [{
+    x:0,
+    y:0,
+}]
 export default class GameScene extends Phaser.Scene {
-    constructor(socketio,pseudo) {
+    constructor(socketio) {
         super({
             key: 'GameScene'
         })
         this.socket = socketio
-        this.playerPseudo = pseudo
     }
     preload(){
-        var lifeBar
+               
         var progressBar = this.add.graphics();
         var progressBox = this.add.graphics();
         progressBox.fillStyle(0x222222, 0.8);
@@ -68,7 +71,8 @@ progressBox.destroy();
                 if(this.players[id] != undefined)
                     return
                 this.players[id] = new Player({
-                    socketid : id,
+                    pseudo :p.pseudo,
+                    socket : {id : id},
                     scene: this,
                     key: p.textureKey,
                     x: p.x,
@@ -86,11 +90,19 @@ progressBox.destroy();
             this.players[p.id].rotation = p.rotation
         })
         this.socket.on('player_quit_game',(id)=>{
-            this.players[id].destroy()
-            delete this.players[id]
+            if(this.players[id]){
+                this.socket.vue.table = _.filter(this.socket.vue.table,(o)=>{return o.id !=id})
+                this.players[id].destroy()
+                delete this.players[id]
+
+            }
         })
-        this.socket.on('player_died',(id)=>{
-            this.players[id].die(false)
+        this.socket.on('player_died',(o)=>{
+            _.map(this.socket.vue.table,(k,key)=>{
+                if(k.id == o.killer)
+                this.socket.vue.table[key].score++;
+            })
+            this.players[o.victim].die(false,null)
         })
         
         this.socket.on('player_reloading',(id)=>{
@@ -101,17 +113,27 @@ progressBox.destroy();
             // console.log("Une balle a été tiré")
             var b = this.bullets 
             var bullet = this.bullets.get(this).setActive(true).setVisible(true);
+            console.log("this player is shooting",config.player);
         if (bullet) {
+            bullet.playerId = config.player.id;
             bullet.fire(config.player, config.reticle);
+            if(!this.player.isDead)
             this.physics.add.collider(this.player, bullet, this.player.hitCallback);
         }
         })
         this.socket.on('player_joined_game',(p)=>{
             // console.log("Players joined the game ",p)
+            console.log("PLAYER JOINED THE GAME",p);
             if(this.players[p.id] != undefined)
             return;
+            this.socket.vue.table.push({
+                id:p.id,
+                pseudo:p.pseudo,
+                score:0
+            })
             this.players[p.id] = new Player({
-                socketid : p.id,
+                pseudo : p.pseudo,
+                socket : {id : p.id},
                 scene: this,
                 key: p.textureKey,
                 x: p.x,
@@ -138,7 +160,8 @@ progressBox.destroy();
         this.physics.world.setBounds(0, 0, 1600, 1200)
         // var background = this.add.image(1600, 1200, 'tiles')
         this.player = new Player({
-            socketid : this.socket.id,
+            pseudo : this.socket.vue.pseudo,
+            socket : this.socket,
             scene: this,
             key: 'player_knife_idle_0',
             x: this.sys.game.config.width/1.5,
@@ -195,6 +218,9 @@ progressBox.destroy();
         {
             var rifle_shoot_sound = this.sound.add('rifle_shoot',{rate:1});
             rifle_shoot_sound.play();
+            this.socket.emit('player_shooting',{player:{x:this.player.x,y:this.player.y,rotation:this.player.rotation,pseudo:this.player.pseudo,id:this.player.socket.id},reticle:this.reticle})
+            bullet.fire(this.player, this.reticle);
+            // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback); })
         }
         fire_auto.push(setInterval(() => {
             // console.log("IN THE INTERVAL");
@@ -203,7 +229,7 @@ progressBox.destroy();
             {
                 var rifle_shoot_sound = this.sound.add('rifle_shoot',{rate:1})
                 rifle_shoot_sound.play()
-                this.socket.emit('player_shooting',{player:this.player,reticle:this.reticle})
+                this.socket.emit('player_shooting',{player:{x:this.player.x,y:this.player.y,rotation:this.player.rotation,pseudo:this.player.pseudo,id:this.player.socket.id},reticle:this.reticle})
                 bullet.fire(this.player, this.reticle);
                 // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback); })
                 }
@@ -211,8 +237,12 @@ progressBox.destroy();
             
         }, this)
         this.input.on('pointerup', function (pointer) { 
-            if(this.player.isDead)
+            if(this.player.isDead){
+                _.map(fire_auto,(o)=>{
+                    clearInterval(o)
+                })
                 return
+            }
             this.keys.mouse.isDown=false 
             // console.log("Pointer UP")
             this.player.idle();
@@ -233,7 +263,18 @@ progressBox.destroy();
             }
     
         },this);
-        this.socket.emit('join_game',this.player)
+        this.socket.emit('join_game',{pseudo : this.player.pseudo,
+            socket :{id : this.player.socket.id},
+            key: this.player.textureKey,
+            x: this.playerx,
+            y: this.playery,
+            rotation:this.playerrotation,})
+            this.socket.vue.table.push({
+                id:this.player.socket.id,
+                pseudo:this.player.pseudo,
+                score:0
+            })
+        this.socket.vue.gameStarted=true;
     }
     update(time,delta){
         this.player.update(this.keys,this.reticle, time, delta,this.socket);

@@ -37,9 +37,14 @@ module.exports = (io) => {
             client.broadcast.emit('player_joined_game', player);
         })
         client.on('player_moving', (player) => {
-            game.players[client.id] = player;
-            player.id = client.id;
-            client.broadcast.emit('player_moving', player)
+            if(game.players[client.id]){
+                game.players[client.id].x = player.x;
+                game.players[client.id].y = player.y;
+                game.players[client.id].rotation = player.rotation;
+                game.players[client.id].textureKey = player.textureKey;
+                player.id = client.id;
+                client.broadcast.emit('player_moving', player)
+            }
         })
         client.on('player_shooting', (config) => {
             client.broadcast.emit('player_shooting', config)
@@ -47,8 +52,9 @@ module.exports = (io) => {
         client.on('player_reloading', () => {
             client.broadcast.emit('player_reloading',client.id)
         })
-        client.on('player_died', (player) => {
-            client.broadcast.emit('player_died', client.id)
+        client.on('player_died', (o) => {
+            game.players[o.killerId].score++
+            client.broadcast.emit('player_died', {victim:client.id,killer:o.killerId})
         })
         client.on('player_revived', (player) => {
             client.broadcast.emit('player_revived', player)
