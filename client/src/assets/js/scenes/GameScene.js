@@ -141,7 +141,7 @@ progressBox.destroy();
                 pseudo : p.pseudo,
                 socket : {id : p.id},
                 scene: this,
-                key: p.textureKey,
+                key: 'player_rifle_idle_0',
                 x: p.x,
                 y: p.y,
                 rotation:p.rotation,
