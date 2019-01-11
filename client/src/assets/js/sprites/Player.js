@@ -20,7 +20,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
         this.body.maxVelocity.x = 500
         this.body.maxVelocity.y = 500
         this.state = 'idle'
-        this.weapon = 'shotgun'
+        this.weapon = 'rifle'
         this.anims.play(`player_${this.weapon}_idle`)
         //this.setSize(50,10, true);
         //this.weapon = new Weapon()

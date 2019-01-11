@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <game :startGame="start_game" :pseudo="player.pseudo"></game>
+    <game @backToMenu="()=>{start_game=false}" :startGame="start_game" :pseudo="player.pseudo"></game>
     <iframe v-if="!start_game"  style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/c5LgV5bpV5A?controls=0&autoplay=1&start=3&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="main_div" v-if="!start_game">
     <div class="background"></div>
@@ -14,7 +14,7 @@
         <input @keyup.enter.prevent="handleGameStart" placeholder="Saisir un pseudo" name="pseudo" id="player_pseudo" type="text" v-model="player.pseudo">
         <button id="start_game" @click="handleGameStart">Jouer</button>
       </div>
-      <div class="classement">
+      <div class="classement" v-show="false">
         <div class="classement_header">Classement <div style="float:right;">TOP 10</div></div>
         <div>
           <table>
@@ -85,9 +85,14 @@ export default {
 </script>
 
 <style>
+.main_div{
+
+  background-image:url('/assets/bg.jpg');
+  background-size: cover;
+      background-position: 0% 10%;
+}
 .main_div .background{
   background-color: rgba(0,0,0,.5);
-
   width:100%;
   height:100%;
   position:absolute;
@@ -96,6 +101,7 @@ export default {
 .interface-body{
   z-index:2;
   position:relative;
+  margin-top: 90px;
 }
 .main_div{
   position:fixed;

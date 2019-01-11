@@ -1,6 +1,6 @@
 <template>
 <div>
-        <dead v-if="isDead" :kills="myKills()"></dead>
+        <dead @replay="handleReplay" @backToMenu="handleBackToMenu" v-if="isDead" :kills="myKills()"></dead>
         <score-table v-show="gameStarted" :table='table' style="z-index:11;"></score-table>
         <div style="z-index:10" id="phaser-app" @mousedown="handleMouseDown"></div>
     </div> 
@@ -24,6 +24,7 @@ export default {
             if(newV){
                 document.socket.vue = this
                 game = Jeu.start(document.socket)
+                console.log(game)
             }
         },
     },
@@ -38,6 +39,16 @@ export default {
     sockets:{
     },
     methods:{
+        handleBackToMenu(){
+            this.$emit('backToMenu')
+            this.gameStarted=false;
+            this.isDead=false;
+            game.scene.scenes[0].scene.stop()
+        },
+        handleReplay(){
+            this.isDead=false;
+            game.scene.scenes[0].scene.restart()
+        },
         handleMouseDown(){
             game.input.mouse.requestPointerLock();
         },

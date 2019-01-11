@@ -4,6 +4,7 @@ export default class Bullet extends Phaser.GameObjects.Image
     {
         //console.log("CREATED BULLET",config);
         super(config,config.player.x,config.player.y,'bullet')
+        config.physics.add.collider(this, config.worldLayer);
         this.speed = 1.3;
         this.born = 0;
         this.direction = 0;
@@ -43,7 +44,9 @@ export default class Bullet extends Phaser.GameObjects.Image
         this.rotation = shooter.rotation; // angle bullet with shooters rotation
         this.born = 0; // Time since new bullet spawned
     }
-    
+    handleCollide(){
+        this.clear()
+    }
     // Updates the position of the bullet each cycle
     update(time, delta)
     {

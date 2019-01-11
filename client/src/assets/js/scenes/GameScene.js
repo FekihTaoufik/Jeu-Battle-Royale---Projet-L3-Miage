@@ -15,11 +15,12 @@ export default class GameScene extends Phaser.Scene {
             key: 'GameScene'
         })
         this.socket = socketio
+        this.locked=false
     }
     preload(){
-               
-        var progressBar = this.add.graphics();
-        var progressBox = this.add.graphics();
+        this.bullets_stock={}
+        var progressBar = this.add.graphics(300,300);
+        var progressBox = this.add.graphics(300,300);
         progressBox.fillStyle(0x222222, 0.8);
         progressBox.fillRect(240, 270, 320, 50);
 
@@ -111,14 +112,16 @@ progressBox.destroy();
         })
         this.socket.on('player_shooting',(config)=>{
             // console.log("Une balle a été tiré")
-            var b = this.bullets 
-            var bullet = this.bullets.get(this).setActive(true).setVisible(true);
+            var bulletId = config.bullet.id
+            this.bullets_stock[bulletId] = this.bullets.get(this).setActive(true).setVisible(true);
+            
             console.log("this player is shooting",config.player);
-        if (bullet) {
-            bullet.playerId = config.player.id;
-            bullet.fire(config.player, config.reticle);
+        if (this.bullets_stock[bulletId]) {
+            this.bullets_stock[bulletId].playerId = config.player.id;
+            this.bullets_stock[bulletId].fire(config.player, config.reticle);
             if(!this.player.isDead)
-            this.physics.add.collider(this.player, bullet, this.player.hitCallback);
+            this.physics.add.collider(this.player, this.bullets_stock[bulletId], this.player.hitCallback);
+            
         }
         })
         this.socket.on('player_joined_game',(p)=>{
@@ -150,10 +153,14 @@ progressBox.destroy();
         const map = this.make.tilemap({ key: "map" });
   const tileset = map.addTilesetImage("tileset", "tiles");
 
-  const worldLayer = map.createStaticLayer("Monde", tileset, 0, 0);
-  const collideLayer = map.createStaticLayer("Collision", tileset, 0, 0);
-
-
+  this.worldLayer = map.createStaticLayer("Monde", tileset, 0, 0);
+  this.worldLayer.setCollisionByProperty({ collides: true });
+//   const debugGraphics = this.add.graphics().setAlpha(0.75);
+//   worldLayer.renderDebug(debugGraphics, {
+//     tileColor: null, // Color of non-colliding tiles
+//     collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
+//     faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
+//   });
 
 
 
@@ -163,18 +170,18 @@ progressBox.destroy();
             pseudo : this.socket.vue.pseudo,
             socket : this.socket,
             scene: this,
-            key: 'player_knife_idle_0',
+            key: 'player_rifle_idle_0',
             x: this.sys.game.config.width/1.5,
             y: this.sys.game.config.height/1.5,
             rotation:50,
             makeHealthBar:true
         })
-        this.physics.add.collider(this.player, collideLayer);
+        this.physics.add.collider(this.player, this.worldLayer);
         this.bullets = this.physics.add.group({
             classType: Bullet,
             // maxSize: 10,
             runChildUpdate: true});
-        
+            
         this.reticle = new Reticle({ 
             scene: this,
             key: 'reticle',
@@ -182,7 +189,7 @@ progressBox.destroy();
             y: this.sys.game.config.height/2,
         }
             )
-        this.cameras.main.zoom = 0.8;
+        this.cameras.main.zoom = 0.9;
         this.cameras.main.startFollow(this.player)
 
         this.keys = {
@@ -208,30 +215,40 @@ progressBox.destroy();
         FOR TEST
         */
        var fire_auto =[]
+       console.log('SCENE',this);
+       this.input.on('pointerLockChange', function (pointer) {
+           console.log('CHANGE POINTER LOCK',pointer)
+       })
        this.input.on('pointerdown', function (pointer) {
+           if(!this.locked){
+               this.locked=true;
+               return;
+           }
+
            if(this.player.isDead)
             return
         this.keys.mouse.isDown=true
         this.player.attack()
-        var bullet = this.bullets.get(this).setActive(true).setVisible(true);
-        if (bullet)
+        var bulletId = this.player.socket.id+'-bullet-'+(new Date()).getTime()
+            this.bullets_stock[bulletId] = this.bullets.get(this).setActive(true).setVisible(true);
+        if (this.bullets_stock[bulletId])
         {
             var rifle_shoot_sound = this.sound.add('rifle_shoot',{rate:1});
             rifle_shoot_sound.play();
-            this.socket.emit('player_shooting',{player:{x:this.player.x,y:this.player.y,rotation:this.player.rotation,pseudo:this.player.pseudo,id:this.player.socket.id},reticle:this.reticle})
-            bullet.fire(this.player, this.reticle);
-            // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback); })
+            this.socket.emit('player_shooting',{bullet:{id:bulletId},player:{x:this.player.x,y:this.player.y,rotation:this.player.rotation,pseudo:this.player.pseudo,id:this.player.socket.id},reticle:this.reticle})
+            this.physics.add.collider(this.bullets_stock[bulletId], this.worldLayer);
+            this.bullets_stock[bulletId].fire(this.player, this.reticle);
         }
         fire_auto.push(setInterval(() => {
             // console.log("IN THE INTERVAL");
-            var bullet = this.bullets.get(this).setActive(true).setVisible(true);
-            if (bullet)
+            var bulletId = this.player.socket.id+'-bullet-'+(new Date()).getTime()
+            this.bullets_stock[bulletId] = this.bullets.get(this).setActive(true).setVisible(true);
+            if (this.bullets_stock[bulletId])
             {
                 var rifle_shoot_sound = this.sound.add('rifle_shoot',{rate:1})
                 rifle_shoot_sound.play()
-                this.socket.emit('player_shooting',{player:{x:this.player.x,y:this.player.y,rotation:this.player.rotation,pseudo:this.player.pseudo,id:this.player.socket.id},reticle:this.reticle})
-                bullet.fire(this.player, this.reticle);
-                // _.map(this.players,(p,id)=>{ if(id != this.socket.id) this.physics.add.collider(p, bullet, p.hitCallback); })
+                this.socket.emit('player_shooting',{bullet:{id:bulletId},player:{x:this.player.x,y:this.player.y,rotation:this.player.rotation,pseudo:this.player.pseudo,id:this.player.socket.id},reticle:this.reticle})
+                this.bullets_stock[bulletId].fire(this.player, this.reticle);
                 }
             }, 100))
             

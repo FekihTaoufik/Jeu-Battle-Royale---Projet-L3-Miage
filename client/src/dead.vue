@@ -7,8 +7,8 @@
     font-size: 32px;
     margin-top: 8px;">Vous etes MORT</div>
     <div style="font-size:20px;">Bravo ! Vous avez tué {{kills}} joueurs</div>
-    <button style="margin-top:15px;" class="button">Rejouer !</button><br>
-    <button style="margin-top:15px;" class="button button-red">Menu principal</button>
+    <button @click="handleReplay" style="margin-top:15px;" class="button">Rejouer !</button><br>
+    <button @click="handleBackToMenu" style="margin-top:15px;" class="button button-red">Menu principal</button>
     </div>
 </div>
 </template>
@@ -22,6 +22,12 @@ export default {
         }
     },
     methods:{
+        handleReplay(){
+            this.$emit('replay')
+        },
+        handleBackToMenu(){
+            this.$emit('backToMenu');
+        }
     },
     created(){  
     }

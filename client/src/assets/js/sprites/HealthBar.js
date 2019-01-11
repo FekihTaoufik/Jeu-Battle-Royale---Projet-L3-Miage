@@ -4,10 +4,13 @@ export default class HealthBar extends Phaser.GameObjects.Graphics{
         super(scene)
         this.value = 100;
         this.p = 76 / 100;
-        this.x = 150;
-        this.y = 150;
+        this.x = -20;
+        this.y = 0;
         this.distant = !show
         if(show){
+            this.lifeText = scene.add.text(-80, 0, 'Vie', { fontFamily: 'Arial', fontSize: 15, color: '#000000' });
+            this.lifeText.depth=15
+            this.lifeText.setScrollFactor(0);
             console.log("Showing healthbar")
             this.draw();
             this.depth = 15
