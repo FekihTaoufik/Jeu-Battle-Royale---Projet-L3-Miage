@@ -3,7 +3,7 @@ import HealthBar from './HealthBar'
 export default class Player extends Phaser.GameObjects.Sprite {
     constructor(config) 
     {
-        console.log("CREATED PLAYER",config);
+        // console.log("CREATED PLAYER",config);
         super(config.scene, config.x, config.y, config.key)
         this.pseudo = config.pseudo
         config.scene.physics.world.enable(this)
@@ -34,7 +34,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
         }, this);
         // Weapon and bullets
         // this.bullets = config.scene.physics.add.group({classType:Bullet,runChildUpdate:true},config)
-        console.log(this,'HERE IS THE PLAYA')
+        // console.log(this,'HERE IS THE PLAYA')
         config.scene.add.existing(this)
     }
     
@@ -181,6 +181,6 @@ export default class Player extends Phaser.GameObjects.Sprite {
             enemyHit.die(true,bulletHit.playerId);
         }
         
-        console.log(enemyHit.socket.id," GOT HIT MY HEALTH IS NOW ",enemyHit.health.value)
+        // console.log(enemyHit.socket.id," GOT HIT MY HEALTH IS NOW ",enemyHit.health.value)
     }
 }

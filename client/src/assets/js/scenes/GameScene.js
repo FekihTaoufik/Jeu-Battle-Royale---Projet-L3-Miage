@@ -118,7 +118,7 @@ progressBox.destroy();
             var bulletId = config.bullet.id
             this.bullets_stock[bulletId] = this.bullets.get(this).setActive(true).setVisible(true);
             
-            console.log("this player is shooting",config.player);
+            // console.log("this player is shooting",config.player);
         if (this.bullets_stock[bulletId]) {
             this.bullets_stock[bulletId].playerId = config.player.id;
             this.bullets_stock[bulletId].fire(config.player, config.reticle);
@@ -128,8 +128,8 @@ progressBox.destroy();
         }
         })
         this.socket.on('player_joined_game',(p)=>{
-            // console.log("Players joined the game ",p)
-            console.log("PLAYER JOINED THE GAME",p);
+            console.log("Players joined the game ",p)
+            // console.log("PLAYER JOINED THE GAME",p);
             if(this.players[p.id] != undefined)
             return;
             this.socket.vue.table.push({
@@ -218,9 +218,9 @@ progressBox.destroy();
         FOR TEST
         */
        var fire_auto =[]
-       console.log('SCENE',this);
+    //    console.log('SCENE',this);
        this.input.on('pointerLockChange', function (pointer) {
-           console.log('CHANGE POINTER LOCK',pointer)
+        //    console.log('CHANGE POINTER LOCK',pointer)
        })
        this.input.on('pointerdown', function (pointer) {
            if(!this.locked){
