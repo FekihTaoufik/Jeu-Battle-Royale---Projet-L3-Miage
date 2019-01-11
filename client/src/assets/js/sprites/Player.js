@@ -174,7 +174,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
         bulletHit.clear()
         if(enemyHit.health.value>0)
         {
-            enemyHit.health.decrease(Math.round(Math.random()*10));
+            enemyHit.health.decrease(10);
         }
         else if (!this.isDread)
         {
