@@ -58,9 +58,8 @@ module.exports = (io) => {
         client.on('player_died', (o) => {
             if(game.players[o.killerId]){
                 game.players[o.killerId].score++
-                
+                client.broadcast.emit('player_died', {victim:client.id,killer:o.killerId})
             }
-            client.broadcast.emit('player_died', {victim:client.id,killer:o.killerId})
         })
         client.on('player_revived', (player) => {
             client.broadcast.emit('player_revived', player)
