@@ -135,6 +135,14 @@ export default class Player extends Phaser.GameObjects.Sprite {
             if (old.rotation != this.rotation || old.x != this.x || old.y != this.y)
             this.socket.emit('player_moving', this)
     }
+    respawn(){
+        // this.anims.play(`player_${this.weapon}_idle`)
+        this.setTexture('player_rifle_idle_0')
+        this.anims.play()
+        this.setActive(true)
+        this.isDead=false
+        // this.socket.vue.isDead=false;
+    }
     die(emit,killerId){
         if(this.isDead)
             return;

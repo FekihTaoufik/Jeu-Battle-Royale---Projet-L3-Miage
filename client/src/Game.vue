@@ -46,6 +46,7 @@ export default {
             game.scene.scenes[0].scene.stop()
         },
         handleReplay(){
+            document.socket.emit('player_respawn');
             this.isDead=false;
             game.scene.scenes[0].scene.restart()
         },

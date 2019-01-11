@@ -36,6 +36,9 @@ module.exports = (io) => {
             client.emit('players_list',_players)
             client.broadcast.emit('player_joined_game', player);
         })
+        client.on('player_respawn', (player) => {
+            client.broadcast.emit('player_respawned', client.id)
+        });
         client.on('player_moving', (player) => {
             if(game.players[client.id]){
                 game.players[client.id].x = player.x;

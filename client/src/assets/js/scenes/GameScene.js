@@ -83,6 +83,9 @@ progressBox.destroy();
                 })
             })
         })
+        this.socket.on('player_respawned',(pId)=>{
+            this.players[pId].respawn()
+        })
         this.socket.on('player_moving',(p)=>{
             if(this.players[p.id] == undefined)
                 return
@@ -286,6 +289,14 @@ progressBox.destroy();
             x: this.playerx,
             y: this.playery,
             rotation:this.playerrotation,})
+            var found = false;
+            _.map(this.socket.vue.table,(o)=>{
+                if(o.id == this.player.socket.id){
+                    found = true; 
+                    return;
+                }
+            })
+            if(!found)
             this.socket.vue.table.push({
                 id:this.player.socket.id,
                 pseudo:this.player.pseudo,
